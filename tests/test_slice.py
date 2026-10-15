@@ -63,6 +63,7 @@ class SliceTests(unittest.TestCase):
         word = WordLensAdapter()
         self.assertEqual(word.invoke({'text': 'one\ttwo\nthree'}, {'local:compute'})['output']['words'], 3)
         self.assertEqual(word.invoke({'text': ''}, {'local:compute'})['output']['words'], 0)
+        self.assertEqual(word.invoke({'text': 'x'}, {'local:compute'})['provenance']['version'], '1')
         self.assertEqual(word.invoke({'text': 1}, {'local:compute'})['error']['code'], 'invalid_input')
         self.assertEqual(word.invoke({'text': 'x'}, set())['error']['code'], 'permission_refused')
         js = JsonToolAdapter()

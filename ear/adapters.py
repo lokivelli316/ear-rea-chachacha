@@ -70,7 +70,7 @@ class WordLensAdapter(LocalAdapter):
             'output_schema': {'type': 'object', 'required': ['words', 'characters'], 'properties': {'words': {'type': 'integer'}, 'characters': {'type': 'integer'}}},
             'permissions': ['local:compute'], 'compatibility': 'Python 3.11+',
             'provenance': {'source': 'EAR WordLens sample; inspired by GNU wc word semantics',
-                           'strategy': 'rebuild', 'license': 'Original implementation; no GNU source copied'},
+                           'strategy': 'rebuild', 'version': '1', 'license': 'Original implementation; no GNU source copied'},
             'cancellation': 'Between calls; synchronous bounded local computation',
             'artifact_owner': 'operator'})
 
