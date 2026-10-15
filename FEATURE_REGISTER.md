@@ -147,3 +147,34 @@ Requirements read from those words, for checking the build against:
 | R9 | Voice-to-text and a typed text box, both |
 
 INTENT: **CONFIRMED BY OPERATOR** for EAR-0002.
+
+---
+
+## 2026-10-15 — EAR-0002 Cha 1: chat built
+
+| Field | Record |
+| --- | --- |
+| Target | `lokivelli316/apksister-`, commit `a9664be` |
+| Build | GitHub Actions compiled it; release tag `build-6` published (app-debug.apk). Compile = PASS. |
+| On-device test | **NOT RUN.** Nothing marked PASS until the operator tests it on his phone. |
+| Strategy used | Reuse (operator's own multi-provider approach), written fresh and native for Android. No third-party code copied. |
+
+Requirement check, by reading the code (not by running it):
+
+| # | Status in code | Notes |
+| --- | --- | --- |
+| R1 Connected APIs and brains | PARTIAL | Every seat can be connected to a saved provider and model. Only her talking seat (Alyra L4, Elvira L3) answers in chat. Relay order through her other seats is the operator's ruling; not invented by the builder. |
+| R2 Document boundaries | Built | Separate chat store per sister; each sister receives only her own history; Dual never merges sessions; files are SEE/USE (never stored); upper seats untouched; identity text operator-written. One disclosed addition: a short app note (how files and saving work) is added after her identity text. |
+| R3 Import | Built | Text files as text; pictures; PDFs as up to 8 page images. Word (.docx) and other binary files can't be read yet. |
+| R4 Export | Built | SAVE AS FILE on any reply, SAVE CHAT for the conversation. Text/Markdown only; she can't hand back pictures or binary files yet. |
+| R5 Solo | Built | |
+| R6 Dual: both or one | Built | Alyra / Both / Elvira buttons. |
+| R7 Proper buttons | Built | 60dp minimum height, labels follow the reading size. |
+| R8 Custom font | Built | Size, font, spacing, bold, high contrast; applies to chat screens. Settings and gate screens keep their own sizes. |
+| R9 Voice + typed | Built | Voice uses Android's speech service; needs Google speech on the phone. |
+
+Other changes: CI saves a build log to a `ci-log/run-N` branch if a build fails. Gate footer and README updated to describe chat. NEW CHAT archives, never deletes.
+
+**Iteration history**
+
+- Cha 1 (2026-10-15): Built and compiled. On-device tests NOT RUN.
