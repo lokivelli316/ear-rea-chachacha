@@ -42,6 +42,8 @@ A multi-LLM boardroom is another possible **consumer or collaborator**, not the 
 
 For each candidate record: feature ID; operator intent; source and version; source/license constraints; evidence; observed mechanism; chosen strategy (rebuild / reuse / connect); adapter or implementation; test plan; actual test results; limitations; operator approval; iteration history; and artifact hashes or receipts where relevant.
 
+The live register is [FEATURE_REGISTER.md](FEATURE_REGISTER.md).
+
 ## First honest proof
 
 Choose **two features from two independent applications**. Investigate each. Implement one as an original capability and connect the other through a documented adapter, if feasible. Assemble both into a tiny third project with its own identity. Verify each feature alone, then together; disconnect one provider and confirm graceful degradation. Save the register, evidence, test outputs, and failure notes.
