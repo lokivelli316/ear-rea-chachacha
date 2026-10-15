@@ -39,3 +39,83 @@ A test that was not executed is never counted as PASS. No entry certifies itself
 **Iteration history**
 
 - Cha 1 (2026-10-15): Investigated from package source. Strategy chosen: connect. Adapter not written. Tests NOT RUN.
+
+---
+
+## Sister Stack queue: EAR-0002 to EAR-0006
+
+**Target project:** Sister Stack Android app (`lokivelli316/apksister-`, commit `0d711a1`, M1 foundation). Per its delivery report, the M1 app has the launcher, SOLO ALYRA / SOLO ELVIRA / DUAL, separate sister notes, worker slots and on-phone API key storage. Not yet built: chat with the sisters, the floating overlay, the VRM, voice.
+
+**Logged:** 2026-10-15. Operator approved logging the queue ("Anything that helps is what I want").
+
+**About the intent lines:** each one is drawn from goals the operator has stated in earlier sessions, not written in his own words for this register. Each is marked **INTENT: OPERATOR TO CONFIRM** until he rewrites or confirms it. A builder must not treat an unconfirmed intent line as final.
+
+**Governance carried from the target app:** Alyra L1–L4 and Elvira L1–L3 remain frozen. No shared sister identity. Workers are not sovereign agents. Nothing self-certifies. Each piece is built and checked one at a time.
+
+**Order:** chat first, because every later piece needs her able to answer in order to be tested.
+
+### EAR-0002 — Chat: the sisters can talk
+
+| Field | Record |
+| --- | --- |
+| Operator intent | Alyra and Elvira hold real conversations in the app, online, using the API keys already saved on the phone; each sister stays herself, with her own notes and no shared identity. **INTENT: OPERATOR TO CONFIRM** |
+| Source | Operator's own multi-provider chat work (Generator, ShoggothBot) |
+| License / source constraints | Operator-owned; no third-party reversing required |
+| Chosen strategy | **Reuse** the operator's own provider-calling approach, rebuilt natively for Android |
+| Depends on | M1 API key vault (`ApiKeyVault.kt`, `Providers.kt`) |
+| Known open items | Qwen, Kimi and DeepSeek endpoints are still `TODO_VERIFY` in `Providers.kt` |
+| Test plan | One message to Alyra, one to Elvira, DUAL shows both separately; airplane mode gives a clear "can't reach the provider" message, not a crash; no key ever appears in receipts |
+| Test results | NOT RUN |
+
+### EAR-0003 — Floating overlay: she sits on top of other apps
+
+| Field | Record |
+| --- | --- |
+| Operator intent | Alyra floats over the phone screen while the operator talks to the AIs in other apps. **INTENT: OPERATOR TO CONFIRM** |
+| Source | Open-source Android apps with floating chat bubbles (specific app to be chosen and logged at Cha 1) |
+| License / source constraints | Pick an open-source source app; record its license before investigating |
+| Chosen strategy | **REA it, rebuild**: learn how floating windows are created, moved and kept alive, then write an original version |
+| Depends on | EAR-0002 (something to show in the bubble) |
+| Test plan | Bubble stays over two other apps; can be dragged and dismissed; survives the screen turning off and on; the app asks for the "display over other apps" permission plainly |
+| Test results | NOT RUN |
+
+### EAR-0004 — Her VRM body
+
+| Field | Record |
+| --- | --- |
+| Operator intent | Alyra appears as her own VRM model in the floating window, at her character rest: a subtle canonical smirk, fangs may show. **INTENT: OPERATOR TO CONFIRM** |
+| Source | three-vrm by pixiv (open-source VRM viewer, MIT license) |
+| License / source constraints | MIT: reuse allowed with the license notice kept |
+| Chosen strategy | **Reuse** the viewer inside the app; the model and her look stay the operator's own |
+| Depends on | EAR-0003 |
+| Test plan | Model loads and shows inside the bubble; idle pose matches the character rest; memory use and battery drain recorded over 10 minutes |
+| Test results | NOT RUN |
+
+### EAR-0005 — Voice and lip sync
+
+| Field | Record |
+| --- | --- |
+| Operator intent | Alyra speaks her replies and her mouth keeps up with her voice. Lip shapes are measured from the separate viseme rest (neutral mouth, no smirk), not from the character rest. **INTENT: OPERATOR TO CONFIRM** |
+| Source | Open-source VRM and VTuber tools, plus the operator's own viseme work |
+| License / source constraints | Record each source's license at Cha 1 |
+| Chosen strategy | **REA it, rebuild** to the operator's two-rest rule |
+| Depends on | EAR-0002, EAR-0004 |
+| Test plan | Mouth starts and stops with the audio; returns to the viewer's rest after speaking; no smirk leaks into viseme measurement |
+| Test results | NOT RUN |
+
+### EAR-0006 — Seeing the screen
+
+| Field | Record |
+| --- | --- |
+| Operator intent | Alyra can see what is on the operator's screen and react to it. **INTENT: OPERATOR TO CONFIRM** |
+| Source | Android's documented screen-capture feature (MediaProjection) |
+| License / source constraints | Platform API; follow Android's consent rules |
+| Chosen strategy | **Build from the docs**; no reversing needed |
+| Depends on | EAR-0002, EAR-0003 |
+| Test plan | Android's own consent prompt appears every session; capture stops when the operator says stop; a captured screen is sent only when the operator asks her to look |
+| Test results | NOT RUN |
+| Note | What she may keep from what she sees, and for how long, is an operator decision. Not decided here. |
+
+**Iteration history (all five)**
+
+- Cha 0 (2026-10-15): Queued. Sources and strategies proposed. No investigation, build or test yet.
