@@ -10,6 +10,7 @@ from unittest.mock import patch
 
 from ear.adapters import JsonToolAdapter, WordLensAdapter
 from ear.engine import Engine
+from ear.demo import demonstrate
 from ear.register import Register, RegisterError
 
 
@@ -86,6 +87,12 @@ class BoundaryTests(unittest.TestCase):
             self.path.write_text(content)
             with self.assertRaises(RegisterError):
                 self.reg.read()
+
+    def test_demo_cancellation_does_not_grant_consent(self):
+        result = demonstrate(self.reg, execute=True, operator='tester', cancel=lambda: True)
+        self.assertEqual(result['status'], 'cancelled')
+        self.assertNotIn('demo.words', self.reg.approvals())
+        self.assertFalse(any(e['kind'] == 'verification' for e in self.reg.read()))
 
     def test_wordlens_is_independently_runnable(self):
         result = subprocess.run([sys.executable, '-m', 'ear.providers.wordlens'],

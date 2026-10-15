@@ -10,7 +10,17 @@ FIXTURE = {'text': 'federate do not-fuse', 'document': {'project': 'Mosaic Desk'
 PERMISSIONS = {'local:compute', 'local:subprocess'}
 
 
-def demonstrate(register, *, execute=False, operator=None):
+def demonstrate(register, *, execute=False, operator=None, cancel=None):
+    def cancelled():
+        return bool(cancel and cancel())
+
+    def cancellation_receipt():
+        result = {'application': 'Mosaic Desk', 'status': 'cancelled'}
+        register.record('run', None, result)
+        return result
+
+    if cancelled():
+        return cancellation_receipt()
     features = register.features()
     definitions = [
         ('demo.words', 'wordlens', 'rebuild',
@@ -37,16 +47,24 @@ def demonstrate(register, *, execute=False, operator=None):
         return engine.run(FIXTURE, feature_ids=queue)
     if not operator or not operator.strip():
         return {'status': 'permission_refused', 'reason': 'Explicit approval and operator identity required'}
+    if cancelled():
+        return cancellation_receipt()
     for ident in queue:
         register.decide(ident, approved=True, operator=operator)
     alone = {}
     for ident, adapter in zip(queue, adapters.values()):
+        if cancelled():
+            return cancellation_receipt()
         receipt = adapter.invoke(FIXTURE, PERMISSIONS)
         register.record('verification', ident, {'scenario': 'alone', 'receipt': receipt})
         alone[adapter.descriptor['id']] = receipt
-    together = engine.run(FIXTURE, execute=True, permissions=PERMISSIONS, feature_ids=queue)
+    together = engine.run(FIXTURE, execute=True, permissions=PERMISSIONS, feature_ids=queue, cancel=cancel)
+    if together['status'] == 'cancelled' or cancelled():
+        return cancellation_receipt()
     adapters['json-tool'].disconnect()
-    disconnected = engine.run(FIXTURE, execute=True, permissions=PERMISSIONS, feature_ids=queue)
+    disconnected = engine.run(FIXTURE, execute=True, permissions=PERMISSIONS, feature_ids=queue, cancel=cancel)
+    if disconnected['status'] == 'cancelled' or cancelled():
+        return cancellation_receipt()
     checks = {
         'word_count': alone['wordlens']['ok'] and alone['wordlens']['output']['words'] == 3,
         'json_roundtrip': alone['json-tool']['ok'] and json.loads(alone['json-tool']['output']['formatted']) == FIXTURE['document'],

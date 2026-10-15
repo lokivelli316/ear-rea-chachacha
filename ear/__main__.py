@@ -53,7 +53,7 @@ def main(argv=None):
     try:
         if args.command == 'demo':
             result = demonstrate(register, execute=args.execute,
-                                 operator=args.operator if args.approve else None)
+                                 operator=args.operator if args.approve else None, cancel=lambda: cancelled)
         elif args.command == 'replay':
             result = {'status': 'replayed', 'events': register.read(), 'features': register.features()}
         elif args.command == 'capabilities':
