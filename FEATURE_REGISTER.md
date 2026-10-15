@@ -119,3 +119,31 @@ A test that was not executed is never counted as PASS. No entry certifies itself
 **Iteration history (all five)**
 
 - Cha 0 (2026-10-15): Queued. Sources and strategies proposed. No investigation, build or test yet.
+
+---
+
+## 2026-10-15 — EAR-0002 intent confirmed by operator (correction line)
+
+The EAR-0002 intent above was drafted, not the operator's words. The operator supplied his own intent on 2026-10-15. **This line supersedes the drafted one; the drafted line stays above for lineage.**
+
+Operator's words, verbatim:
+
+> "The chat should work with the connected api's with the brains that's connected and like the documents here say. It has import and export buttons for other files so which sister that's launched is capable of reading the file and capabilities to send a document or other file back when they are done with it. When one sister is launched I'm talking to her when both are launched I have the ability to talk to both or just 1. With proper buttons and customizable font due to the eye problems I have. Prefer to be able to have a voice to text as well as a typed in text box as well."
+
+"The documents here" = `SISTER_STACK_COMPLETION_PLAN_v1.2` (counter-seat doctrine, 13 Oct 2026) and `Sister_Stack_Master_v2_0_Lower_Faculty_Architecture_2026-10-07`, both supplied by the operator in this session.
+
+Requirements read from those words, for checking the build against:
+
+| # | Requirement |
+| --- | --- |
+| R1 | Chat runs on the operator's connected APIs, through each sister's connected brains |
+| R2 | Follows the v2.0 boundaries: separate selves, no merged conversation, upper brains frozen, receiving is not remembering |
+| R3 | IMPORT button: the launched sister can read the file |
+| R4 | EXPORT: the sister's finished document or file can be saved back out |
+| R5 | Solo launch: the operator talks to that sister |
+| R6 | Dual launch: the operator can talk to both, or to just one |
+| R7 | Proper (large, clear) buttons |
+| R8 | Customizable font, for the operator's eyes |
+| R9 | Voice-to-text and a typed text box, both |
+
+INTENT: **CONFIRMED BY OPERATOR** for EAR-0002.
