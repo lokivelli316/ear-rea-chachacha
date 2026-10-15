@@ -1,0 +1,162 @@
+{
+  "alone": {
+    "json-tool": {
+      "adapter": "json-tool",
+      "artifact_owner": "operator",
+      "error": null,
+      "input_checksum": "3388ec4aadc522afc11d9a284cff84fcca2b7e19ba1860e3479f9a0d90feade9",
+      "ok": true,
+      "output": {
+        "formatted": "{\n    \"features\": 2,\n    \"project\": \"Mosaic Desk\"\n}\n"
+      },
+      "output_checksum": "167ccd485c64bc4aca41837734f6f44bc74bd2367872575ee5d4fc0676de482b",
+      "provenance": {
+        "license": "Python Software Foundation License",
+        "source": "CPython json.tool",
+        "strategy": "connect",
+        "version": "3.12.14"
+      }
+    },
+    "wordlens": {
+      "adapter": "wordlens",
+      "artifact_owner": "operator",
+      "error": null,
+      "input_checksum": "3388ec4aadc522afc11d9a284cff84fcca2b7e19ba1860e3479f9a0d90feade9",
+      "ok": true,
+      "output": {
+        "characters": 20,
+        "words": 3
+      },
+      "output_checksum": "bf4e65d162f8a77477fa5571b406482bddd5baec8a8642d6f99934470fc8c1d8",
+      "provenance": {
+        "license": "Original implementation; no GNU source copied",
+        "source": "EAR WordLens sample; inspired by GNU wc word semantics",
+        "strategy": "rebuild",
+        "version": "1"
+      }
+    }
+  },
+  "application": "Mosaic Desk",
+  "checks": {
+    "composition": true,
+    "disconnect": true,
+    "json_roundtrip": true,
+    "word_count": true
+  },
+  "disconnected": {
+    "iterations": [
+      {
+        "number": 1,
+        "receipts": [
+          {
+            "adapter": "wordlens",
+            "artifact_owner": "operator",
+            "error": null,
+            "feature_id": "demo.words",
+            "input_checksum": "3388ec4aadc522afc11d9a284cff84fcca2b7e19ba1860e3479f9a0d90feade9",
+            "ok": true,
+            "output": {
+              "characters": 20,
+              "words": 3
+            },
+            "output_checksum": "bf4e65d162f8a77477fa5571b406482bddd5baec8a8642d6f99934470fc8c1d8",
+            "provenance": {
+              "license": "Original implementation; no GNU source copied",
+              "source": "EAR WordLens sample; inspired by GNU wc word semantics",
+              "strategy": "rebuild",
+              "version": "1"
+            }
+          },
+          {
+            "adapter": "json-tool",
+            "artifact_owner": "operator",
+            "error": {
+              "code": "disconnected",
+              "message": "Provider was disconnected"
+            },
+            "feature_id": "demo.json",
+            "input_checksum": "3388ec4aadc522afc11d9a284cff84fcca2b7e19ba1860e3479f9a0d90feade9",
+            "ok": false,
+            "output": null,
+            "provenance": {
+              "license": "Python Software Foundation License",
+              "source": "CPython json.tool",
+              "strategy": "connect",
+              "version": "3.12.14"
+            }
+          }
+        ],
+        "run_id": "a667760e-e4dd-401a-874c-be89b68210ae"
+      }
+    ],
+    "limitations": [
+      "Local fixture verification only; no REA integration or deployment"
+    ],
+    "max_iterations": 3,
+    "queue": [
+      "demo.words",
+      "demo.json"
+    ],
+    "run_id": "a667760e-e4dd-401a-874c-be89b68210ae",
+    "status": "degraded"
+  },
+  "rea": "UNKNOWN: optional external integration, not invoked",
+  "status": "verified",
+  "together": {
+    "iterations": [
+      {
+        "number": 1,
+        "receipts": [
+          {
+            "adapter": "wordlens",
+            "artifact_owner": "operator",
+            "error": null,
+            "feature_id": "demo.words",
+            "input_checksum": "3388ec4aadc522afc11d9a284cff84fcca2b7e19ba1860e3479f9a0d90feade9",
+            "ok": true,
+            "output": {
+              "characters": 20,
+              "words": 3
+            },
+            "output_checksum": "bf4e65d162f8a77477fa5571b406482bddd5baec8a8642d6f99934470fc8c1d8",
+            "provenance": {
+              "license": "Original implementation; no GNU source copied",
+              "source": "EAR WordLens sample; inspired by GNU wc word semantics",
+              "strategy": "rebuild",
+              "version": "1"
+            }
+          },
+          {
+            "adapter": "json-tool",
+            "artifact_owner": "operator",
+            "error": null,
+            "feature_id": "demo.json",
+            "input_checksum": "3388ec4aadc522afc11d9a284cff84fcca2b7e19ba1860e3479f9a0d90feade9",
+            "ok": true,
+            "output": {
+              "formatted": "{\n    \"features\": 2,\n    \"project\": \"Mosaic Desk\"\n}\n"
+            },
+            "output_checksum": "167ccd485c64bc4aca41837734f6f44bc74bd2367872575ee5d4fc0676de482b",
+            "provenance": {
+              "license": "Python Software Foundation License",
+              "source": "CPython json.tool",
+              "strategy": "connect",
+              "version": "3.12.14"
+            }
+          }
+        ],
+        "run_id": "968be21f-fe3f-410d-8915-da06bbbacdfa"
+      }
+    ],
+    "limitations": [
+      "Local fixture verification only; no REA integration or deployment"
+    ],
+    "max_iterations": 3,
+    "queue": [
+      "demo.words",
+      "demo.json"
+    ],
+    "run_id": "968be21f-fe3f-410d-8915-da06bbbacdfa",
+    "status": "accepted"
+  }
+}
