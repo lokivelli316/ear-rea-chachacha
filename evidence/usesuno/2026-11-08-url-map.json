@@ -1,0 +1,844 @@
+{
+  "source": "https://usesuno.com/",
+  "captured_at": "2026-11-08",
+  "method": "public URL map",
+  "count": 168,
+  "links": [
+    {
+      "url": "https://usesuno.com/tools/builder",
+      "title": "Suno Prompt Builder - Structured Style Tool",
+      "description": "Build focused Suno Style prompts from genre, instruments, mood and energy, vocals, production, tempo and song arc. Works in your browser."
+    },
+    {
+      "url": "https://usesuno.com/tools/album",
+      "title": "Suno Album Downloader — MP3, WAV & ZIP",
+      "description": "Download a public Suno album as MP3, WAV or original audio. Review tracks in album order, select all loaded tracks or a few, and export a ZIP."
+    },
+    {
+      "url": "https://usesuno.com/pt-br/tools/downloader",
+      "title": "Baixar Suno MP3 Grátis – Suno Downloader",
+      "description": "Baixe músicas do Suno em MP3, M4A ou WAV grátis. Cole o link de uma música do Suno e baixe o áudio diretamente pelo navegador."
+    },
+    {
+      "url": "https://usesuno.com/guide/limits",
+      "title": "Suno Style Character Limit & Field Specs",
+      "description": "Suno Style and lyrics field length, commas, multi-line vs single block. Practical limits for prompts; verify in-app as Suno updates. Unofficial."
+    },
+    {
+      "url": "https://usesuno.com/guide/glossary",
+      "title": "Suno glossary: Style, lyrics, Extend, terms",
+      "description": "Learn Suno terms in plain English, including Style, lyrics, Extend, Personas, ReMi, credits, production words, structure tags, and field limits."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/dance-club-list",
+      "title": "Suno AI Dance & Club List — Style Keywords | usesuno",
+      "description": "Browse 15 Dance and Club style keywords for Suno prompts, from festival and big-room energy to compact club grooves, with searchable Chinese glosses and ideas."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/children-music-list",
+      "title": "Suno AI Children’s Music List — Style Keywords | usesuno",
+      "description": "Browse 8 Children’s Music style keywords for Suno prompts, including nursery, educational, sing-along, and lullaby contexts with Chinese glosses and ideas."
+    },
+    {
+      "url": "https://usesuno.com/articles/suno-download-limits-september-3-2026",
+      "title": "Suno Download Limits Starting September 3, 2026",
+      "description": "Suno download limits after September 3, 2026: current Free, Pro, Premier and Studio rules, old songs, commercial use, and the official download route."
+    },
+    {
+      "url": "https://usesuno.com/guide/lyrics",
+      "title": "Suno Style vs Lyrics: What Each Controls",
+      "description": "Suno Style vs lyrics: sound vs words, conflicts, alignment. Prompt Builder, lyrics diff, Style library. Unofficial; not affiliated with Suno."
+    },
+    {
+      "url": "https://usesuno.com/articles/practical-suno-prompt-workflow",
+      "title": "A Practical Suno Prompt Workflow for Better Songs",
+      "description": "Use a repeatable Suno prompt workflow to define genre, rhythm, instruments, vocals, and production, then revise one audible choice at a time with purpose."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/space-width-reverb",
+      "title": "Space, Width, and Reverb in Suno Prompts | usesuno.com",
+      "description": "Practice dry, wet, narrow, wide, intimate, spacious, room, plate, and hall reverb language in a typed 10-question Suno lesson with section examples."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/modern-vintage-production",
+      "title": "Modern, Vintage, and Lo-Fi Suno Production | usesuno.com",
+      "description": "Learn to distinguish modern, vintage, retro, lo-fi, and polished production using audible evidence instead of empty era labels in Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/match-genre-to-sound",
+      "title": "Match Genre Names to Sound in Suno Prompts | usesuno.com",
+      "description": "Practice recalling genre names from audible clues, then type and explain the best genre lane for a Suno prompt in this interactive lesson with feedback."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/hip-hop-rap",
+      "title": "Hip-Hop & Rap Prompts for Suno: Style Guide",
+      "description": "Prompt Hip-Hop and Rap in Suno with drum pocket, 808 behavior, and vocal delivery, plus Style lines for trap, boom bap, drill, and melodic rap., Cold Stairwe..."
+    },
+    {
+      "url": "https://usesuno.com/tools/normalize",
+      "title": "Suno Multilingual Lyrics Tag Normalizer Tool",
+      "description": "Convert multilingual Suno lyrics section labels and unusual brackets into standard English tags while preserving ordinary lyric lines in your browser."
+    },
+    {
+      "url": "https://usesuno.com/vi/tools/downloader",
+      "title": "Tải nhạc Suno miễn phí – MP3, WAV và MP4 | UseSuno",
+      "description": "Tải nhạc Suno miễn phí từ liên kết bài hát hoặc Hook công khai: MP3, WAV, âm thanh gốc, MP4 và ảnh bìa. Không cần tài khoản UseSuno."
+    },
+    {
+      "url": "https://usesuno.com/tools/exclude",
+      "title": "Suno Exclude List Builder for Cleaner Prompts",
+      "description": "Build a list for Suno's Exclude control: choose instruments, vocals, genres and production traits to avoid, then copy the result locally in your browser."
+    },
+    {
+      "url": "https://usesuno.com/guide/faq",
+      "title": "Suno AI FAQ: Credits, Tools, Plans & Troubleshooting",
+      "description": "Extended Suno FAQ: Style vs lyrics, credits, models, and how the usesuno.com site fits in. Unofficial education; not affiliated with Suno, Inc."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/fitness-music-list",
+      "title": "Suno AI Fitness List — Style Keywords | usesuno",
+      "description": "Browse 9 Fitness Music Style keywords for Suno prompts, covering HIIT, cardio, cycling, running, and gym contexts with practical energy cues."
+    },
+    {
+      "url": "https://usesuno.com/extensions/suno-prompt-manager",
+      "title": "Suno Prompt Manager Chrome Extension | Prompts & Lyrics",
+      "description": "Suno Prompt Manager saves and applies Style Prompts on Suno, and downloads lyrics as TXT, LRC, or SRT from Library and song pages. Optional sync."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/soundtrack-list",
+      "title": "Suno AI Soundtrack & Score List — Style Keywords | usesuno",
+      "description": "Browse 10 Soundtrack and Score style keywords for Suno prompts, covering cinematic, trailer, dramatic, documentary, and scene-setting contexts and moods., Ma..."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/east-asian-list",
+      "title": "Suno AI East Asian List — Style Keywords | usesuno",
+      "description": "Browse 13 East Asian music style keywords for Suno prompts, covering Chinese, Japanese, Korean, and Mongolian pop or fusion with Chinese glosses and ideas., ..."
+    },
+    {
+      "url": "https://usesuno.com/guide/instruments",
+      "title": "Suno Instruments & Texture: Layers & Texture in Style",
+      "description": "Write clearer Suno instrument and texture prompts using roles, articulation, compound phrases, layer control, and copy-ready Style examples."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/prompt-anatomy",
+      "title": "Suno Prompt Anatomy: Build Better Prompts | usesuno.com",
+      "description": "Learn the six useful parts of a Suno prompt: genre, vocals, instruments, mood, arrangement, and production. Practice naming each cue with simple examples."
+    },
+    {
+      "url": "https://usesuno.com/about",
+      "title": "About Use Suno (usesuno.com): Mission & Editorial Process",
+      "description": "Learn who maintains Use Suno (usesuno.com), how independent Suno guides and browser tools are researched, tested, reviewed, corrected, and responsibly funded."
+    },
+    {
+      "url": "https://usesuno.com/extensions/suno-queue-manager",
+      "title": "Suno Queue Manager Chrome Extension | UseSuno",
+      "description": "Prepare and review Suno music-generation queues, then track submissions and results in a local-first Chrome extension."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/intro-bridge-outro",
+      "title": "Intro, Bridge, and Outro in Suno | usesuno.com",
+      "description": "Learn what intros, bridges, and outros do, then practice writing clear entrances, contrasting middle sections, and intentional endings for Suno songs."
+    },
+    {
+      "url": "https://usesuno.com/lab/vocal-space-eight-generation-test",
+      "title": "Suno Vocal Space Test: 8 v5.5 Generations | usesuno",
+      "description": "Review eight Suno v5.5 generations testing roomy distant vocals against close dry vocals, with playable records, prompts, results, and limits., The Last Word..."
+    },
+    {
+      "url": "https://usesuno.com/research",
+      "title": "UseSuno Research — Data & Experiments for Suno Creators",
+      "description": "Original experiments, benchmarks and data about Suno creator workflows, audio formats and browser tools."
+    },
+    {
+      "url": "https://usesuno.com/articles/suno-production-space-width-tone",
+      "title": "Suno Production Words for Space, Width, and Tone",
+      "description": "Choose concrete Suno production words for room size, stereo width, dynamics, texture, and vocal distance, with listening tests that keep prompts grounded."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/harmony-duet-choir",
+      "title": "Use Harmony, Duets, and Choirs in Suno Prompts",
+      "description": "Practice choosing harmony, unison, call-and-response, duet, choir, and layered backing-vocal cues for clear multi-voice arrangements in Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/recall-genre-names",
+      "title": "Recall Music Genre and Subgenre Names for Suno | usesuno.com",
+      "description": "Learn and recall useful music subgenre names such as neo-soul, post-rock, dream pop, synthwave, boom bap, ambient, bossa nova, and chamber pop."
+    },
+    {
+      "url": "https://usesuno.com/tools/playlist",
+      "title": "Suno Playlist Downloader — Select Tracks & Export ZIP",
+      "description": "Suno playlist downloader: review public songs, choose the tracks you want, and export selected MP3, WAV or original audio in a browser-built ZIP."
+    },
+    {
+      "url": "https://usesuno.com/contact",
+      "title": "Contact usesuno.com: Support, Corrections & Privacy",
+      "description": "Contact the usesuno.com editorial team about guide corrections, browser tools, Suno Prompt Manager, privacy questions, site feedback, or support requests."
+    },
+    {
+      "url": "https://usesuno.com/tools/cleaner",
+      "title": "Suno Style String Cleaner for Prompt Tags",
+      "description": "Clean a Suno Style string in your browser: trim spaces, remove duplicate tags and hype terms, preserve tag order, and fit a chosen character limit for Suno."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/electronic-list",
+      "title": "Suno AI Electronic & EDM List — Style Keywords | usesuno",
+      "description": "English house, techno, trance, DnB, dubstep, and related electronic tags; copyable Style keywords. Optional Chinese glosses. Section browse and search."
+    },
+    {
+      "url": "https://usesuno.com/tools/parser",
+      "title": "Suno Song Inspector — Title, Tags & Lyrics",
+      "description": "Inspect a public Suno song link in one view: retrieve its title, creator, Style tags, duration and available lyrics, then open the next editing tool safely."
+    },
+    {
+      "url": "https://usesuno.com/tools/lyrics-timestamp",
+      "title": "Lyrics Timestamp Tool — LRC & SRT Editor | UseSuno",
+      "description": "Sync lyrics to your audio, adjust word timestamps, and export LRC, SRT, VTT or an MP3 with embedded lyrics. Free, in your browser."
+    },
+    {
+      "url": "https://usesuno.com/tools/random",
+      "title": "Random Suno Style Generator for Prompt Ideas",
+      "description": "Generate a random Suno Style prompt from genre, instruments, mood, vocal and production pillars, then lock useful traits and reroll the rest locally too."
+    },
+    {
+      "url": "https://usesuno.com/tr/tools/downloader",
+      "title": "Suno Şarkı İndirme – MP3 ve MP4 | UseSuno",
+      "description": "Ücretsiz Suno şarkı indirme: herkese açık şarkı veya Hook bağlantısından MP3, WAV, orijinal ses, MP4 ve kapak indir. UseSuno hesabı gerekmez."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/music-moods",
+      "title": "Music Mood Words for Suno Prompts | usesuno.com",
+      "description": "Learn useful music mood words, separate mood from genre, tempo, and energy, then practice choosing clear emotional directions for Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/articles/write-suno-lyrics-song-structure",
+      "title": "How to Write Suno Lyrics That Fit Song Structure",
+      "description": "Learn how to write Suno lyrics around verses, choruses, bridges, line length, repetition, and vocal space so each section supports a coherent song form., Roo..."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/underground-indie-list",
+      "title": "Suno AI Underground & Indie List — Style Keywords | usesuno",
+      "description": "Browse 8 Underground and Indie Style keywords for Suno prompts, covering DIY, bedroom, lo-fi, cassette, small-scene, and alternative contexts."
+    },
+    {
+      "url": "https://usesuno.com/guide/prompting",
+      "title": "Suno Prompt Guide: Write Better Prompts with A/B Tests",
+      "description": "Build Suno prompts from five audible layers, run one-variable A/B tests, log the result, and revise without stacking unrelated prompt phrases."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/improve-generated-result",
+      "title": "Improve a Suno Result with One Prompt Change | usesuno.com",
+      "description": "Diagnose a Suno result, preserve what works, and practice one focused prompt change for vocals, structure, instruments, energy, or production."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/metal-list",
+      "title": "Suno AI Heavy Metal List — Style Keywords | usesuno",
+      "description": "Browse 23 Heavy Metal style keywords for Suno prompts, from classic, thrash, death, black, and doom to progressive and modern metal scene lanes and fusions.,..."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/instrument-review-challenge",
+      "title": "Suno Instrument Prompt Review Challenge | usesuno.com",
+      "description": "Review instrument families, rhythm and melody parts, acoustic and electronic sources, textures, roles, and section placement in a 10-question Suno challenge."
+    },
+    {
+      "url": "https://usesuno.com/tools/profile-downloader",
+      "title": "Suno Profile Downloader: Songs, Styles & Insights",
+      "description": "Suno profile downloader and creator analyzer: review public songs and style trends, then save MP3, WAV, original audio or ZIP packages."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/pop",
+      "title": "Suno AI Pop Prompts: Style Tags, Subgenres & Recipes",
+      "description": "Prompt Pop in Suno with era, region, and subgenre cues, plus Style formulas for synth-pop, city pop, teen pop, chamber pop, and related lanes., Small Talk, B..."
+    },
+    {
+      "url": "https://usesuno.com/tools/cover",
+      "title": "Suno Cover Art Downloader & Resizer Tool",
+      "description": "Retrieve cover art from a public Suno song, preview it, then export the original or square 1600, 1000, 500 and 256 pixel copies from your browser locally."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/pop/mandopop",
+      "title": "Suno Mandopop Prompts: Style Tags & Examples | usesuno",
+      "description": "Mandopop in Suno: piano ballad builds, string choruses, emotional arcs; Mandarin melodic habits without vague “Chinese” seasoning. Unofficial., Don’t call it..."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/chorus-lift",
+      "title": "Create Chorus Lift in Suno Prompts | usesuno.com",
+      "description": "Learn how to make a Suno chorus feel larger through contrast, vocal layers, melody, instruments, rhythm, and section-specific arrangement cues."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/ambient-list",
+      "title": "Suno AI Ambient List — Style Keywords | usesuno",
+      "description": "Browse 12 Ambient Style keywords for Suno prompts, from beatless drones and slow pads to cinematic atmospheres, with search and Chinese glosses., Below the E..."
+    },
+    {
+      "url": "https://usesuno.com/de/tools/downloader",
+      "title": "Suno Downloader – Suno-Songs als MP3 und MP4 herunterladen",
+      "description": "Suno-Songs kostenlos herunterladen: MP3, WAV, Originalaudio, MP4 und Cover aus öffentlichen Song- oder Hook-Links. Kein UseSuno-Konto erforderlich."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/combine-music-genres",
+      "title": "How to Combine Music Genres in Suno Prompts | usesuno.com",
+      "description": "Learn how to combine music genres in Suno prompts by choosing a primary lane, adding one useful influence, and removing vague or conflicting genre piles."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/retro-music-list",
+      "title": "Suno AI Retro & Revival List — Style Keywords | usesuno",
+      "description": "Browse 8 Retro and Revival style keywords for Suno prompts, covering decade nostalgia, vintage production, revival movements, and retro-futurist sounds., Rec..."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/tempo-language",
+      "title": "Use Tempo Language in Suno Prompts | usesuno.com",
+      "description": "Practice slow, moderate, fast, approximate BPM, half-time, and double-time language to describe tempo and rhythmic feel clearly in Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/articles/make-suno-playlist-public-and-download",
+      "title": "Make Your Suno Playlist Public and Download It",
+      "description": "Make your own Suno playlist public on desktop or mobile, copy its share link, and select your songs in Playlist Downloader to save audio or a ZIP archive."
+    },
+    {
+      "url": "https://usesuno.com/tools/lyrics-mv",
+      "title": "UseSuno MV Studio: Make Lyric MVs in Your Browser",
+      "description": "UseSuno MV Studio is an open-source browser-based lyric video maker. Add local audio and timed lyrics, choose animated styles, preview, and export a lyric MV."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/choose-useful-cues",
+      "title": "Choose Useful Cues for a Suno Prompt | usesuno.com",
+      "description": "Learn to keep audible genre, vocal, instrument, mood, structure, and production cues while removing praise, repetition, and irrelevant prompt details."
+    },
+    {
+      "url": "https://usesuno.com/lab/chorus-lift-eight-generation-test",
+      "title": "Suno Chorus Lift Test: 8 v5.5 Generations | usesuno",
+      "description": "Review eight Suno v5.5 generations comparing intentionally flat choruses with a chorus-lift direction, including playable A2/B4 evidence, prompts, results, a..."
+    },
+    {
+      "url": "https://usesuno.com/tools",
+      "title": "16 Free Suno Tools: Prompts, Lyrics, Downloads & MV",
+      "description": "Explore 16 free browser tools for Suno prompts, lyrics, metadata, downloads and lyric MV creation. See which tools work locally or use public links."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/what-is-a-prompt",
+      "title": "What Is a Suno Prompt? Beginner Lesson | usesuno.com",
+      "description": "Learn what a Suno prompt is, how it guides a song, and why results can vary. This beginner lesson uses simple examples and practice questions."
+    },
+    {
+      "url": "https://usesuno.com/sitemap.xml"
+    },
+    {
+      "url": "https://usesuno.com",
+      "title": "Use Suno: Suno AI Prompts, Guides & Tools",
+      "description": "Use Suno (usesuno.com): practical Suno guides, Style references, 16 free browser tools, and the Suno Prompt Manager extension. Independent and unofficial."
+    },
+    {
+      "url": "https://usesuno.com/lab",
+      "title": "Suno Prompt Evidence & Field Notes | usesuno.com",
+      "description": "Review published Suno generation records, visible Style prompts, model labels, playable evidence, editorial observations, and explicit limits before testing."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/pop-list",
+      "title": "Suno AI Pop Subgenres List — Style Keywords | usesuno",
+      "description": "Browse 403 Pop subgenre keywords for Suno prompts, from chart and regional pop to niche scenes and fusions, with Chinese glosses and letter search."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/verse-and-chorus",
+      "title": "Verse and Chorus in Suno Prompts | usesuno.com",
+      "description": "Learn what verses and choruses do, label sections clearly, and practice creating contrast with lyrics, vocals, instruments, mood, and energy in Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/rhythm-instruments",
+      "title": "Rhythm Instruments for Suno Prompts | usesuno.com",
+      "description": "Practice kick, snare, hi-hat, shaker, tambourine, tom, and cymbal vocabulary, then write clear, testable rhythm-instrument cues for Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/improve-a-prompt",
+      "title": "Improve a Suno Prompt: Interactive Editing Practice",
+      "description": "Practice improving Suno prompts by removing vague or conflicting directions and adding clear genre, vocal, instrument, mood, arrangement, and production cues."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/jazz-list",
+      "title": "Suno AI Jazz List — Style Keywords | usesuno",
+      "description": "Browse 145 Jazz Style keywords for Suno prompts, spanning eras, ensembles, regional scenes, and fusions, with Chinese glosses and section search."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/folk-list",
+      "title": "Suno AI Folk & Roots List — Style Keywords | usesuno",
+      "description": "Browse 17 Folk and Roots style keywords for Suno prompts, covering acoustic storytelling, traditional folk, revival, and singer-songwriter lanes and textures..."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/mood-and-movement",
+      "title": "Combine Mood and Movement in Suno Prompts | usesuno.com",
+      "description": "Practice combining mood, energy, tempo, and movement cues into coherent Suno prompts, then repair contradictions and build clear section-to-section changes."
+    },
+    {
+      "url": "https://usesuno.com/tools/downloader",
+      "title": "Suno Downloader — Download Suno Songs as MP3 & MP4",
+      "description": "Free Suno downloader: save a public Suno song as MP3, WAV, original audio, MP4 video or cover art. No usesuno account required."
+    },
+    {
+      "url": "https://usesuno.com/articles/suno-arrangement-clearer-roles",
+      "title": "Suno Arrangement Prompts for Clearer Roles",
+      "description": "Write Suno arrangement prompts that give each instrument a role, register, texture, and section purpose, reducing clutter while preserving musical contrast."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/study-focus-list",
+      "title": "Suno AI Study & Focus List — Style Keywords | usesuno",
+      "description": "Browse 8 Study and Focus style keywords for Suno prompts, covering low-distraction piano, ambient, gentle beats, and calm background contexts for concentration."
+    },
+    {
+      "url": "https://usesuno.com/guide/production",
+      "title": "Suno Production & Space: Mix, Space, Dynamics",
+      "description": "Write Suno production prompts for mix space, reverb, dynamics, groove, and texture, with copy-ready lines linked to mood and instrument controls."
+    },
+    {
+      "url": "https://usesuno.com/privacy",
+      "title": "Privacy Policy: usesuno.com, Suno Prompt Manager & Suno Q...",
+      "description": "How usesuno.com, Suno Prompt Manager, and Suno Queue Manager handle website analytics, local browser storage, optional sync, cloud features, and direct Suno ..."
+    },
+    {
+      "url": "https://usesuno.com/guide/structure",
+      "title": "Suno Song Structure: Verses, Choruses & Endings",
+      "description": "Plan a Suno song structure with clear verses, choruses, bridges, pacing, contrast, transitions, and endings, then test one section decision at a time."
+    },
+    {
+      "url": "https://usesuno.com/tools/batch",
+      "title": "Suno Bulk Downloader — Batch Download Multiple Songs",
+      "description": "Free Suno bulk downloader for multiple public song links. Paste up to 20 Suno songs, then batch download MP3, WAV or original audio, or save them in ZIP files."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/classical-cinematic",
+      "title": "Suno Classical & Cinematic Prompts: Style Tags | usesuno",
+      "description": "Classical & cinematic Suno prompts: name ensembles, dynamics, and score arcs (chamber to trailer) without vague “epic instrumental.” Unofficial guide., Map o..."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/browse",
+      "title": "Suno AI Style Keywords List — Category Lexicon | usesuno",
+      "description": "Browse Suno Style vocabulary for instruments, mood, genre blends, vocals, tempo, production, and regional cues, with Chinese glosses and filters."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/production-character",
+      "title": "Recognize Production Character in Suno Prompts | usesuno.com",
+      "description": "Learn clean, polished, raw, lo-fi, punchy, soft, and saturated production cues in a practical 10-question Suno prompt lesson with audible examples."
+    },
+    {
+      "url": "https://usesuno.com/articles/suno-download-and-usage-policy",
+      "title": "Current Suno Download and Usage Policy Guide",
+      "description": "Understand the current Suno download and usage policy: approved downloads, plan limits, public links, commercial use, records, and creator permission."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/rnb-soul",
+      "title": "Suno R&B & Soul Prompts: Style Tags & Examples | usesuno",
+      "description": "Prompt R&B and Soul in Suno with pocket-first drums, rich chords, and intimate vocals, plus Style lines for Neo-Soul, Quiet Storm, and modern R&B., Borrowed ..."
+    },
+    {
+      "url": "https://usesuno.com/guide/getting-started",
+      "title": "How to Use Suno: Beginner Tutorial & First-Song Test",
+      "description": "How to use Suno in Simple and Custom modes, make a first song, and improve it with a repeatable one-variable test using sourced beginner guidance."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/vocal-tone-texture",
+      "title": "Describe Vocal Tone in Suno Prompts | usesuno.com",
+      "description": "Practice writing warm, airy, raspy, smooth, bright, dark, clear, and intimate vocal-tone cues for more specific, audible, and testable Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/recognize-music-genres",
+      "title": "Recognize Common Music Genres for Suno Prompts | usesuno.com",
+      "description": "Learn to recognize pop, rock, hip-hop, jazz, folk, electronic, cinematic, and R&B genre cues in this interactive Suno prompt lesson with examples."
+    },
+    {
+      "url": "https://usesuno.com/guide/negative-prompts",
+      "title": "Suno Exclude Guide: Remove Unwanted Styles & Sounds",
+      "description": "Learn how to use Suno Exclude under Advanced Options, separate unwanted sounds from positive Style directions, and test one exclusion at a time."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/classical-cinematic/neo-classical-piano",
+      "title": "Suno Neo-Classical Piano Prompts: Style Tags | usesuno",
+      "description": "Neo-classical piano in Suno: felt tone, sparse strings, slow bloom; stay intimate; avoid Hollywood score bloat. Copy-ready Style lines. Unofficial., way back..."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/rnb-list",
+      "title": "Suno AI R&B & Soul List — Style Keywords | usesuno",
+      "description": "R&B and soul micro-genres (neo soul, contemporary R&B, regional lanes) copyable Style keywords. Optional Chinese glosses. Section browse and search., Borrowe..."
+    },
+    {
+      "url": "https://usesuno.com/articles/repeatable-suno-prompt-testing-plan",
+      "title": "A Repeatable Suno Prompt Testing Plan for Creators",
+      "description": "Use a repeatable Suno prompt testing plan to compare one variable at a time, record useful evidence, and turn subjective listening into better revisions."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/electronic-edm",
+      "title": "Suno Electronic & EDM Prompts: Style Tags | usesuno",
+      "description": "Prompt Electronic and EDM in Suno with tempo, kick patterns, bass design, and energy curves, plus Style lines for house, techno, trance, and DnB., Afterglow ..."
+    },
+    {
+      "url": "https://usesuno.com/ru/tools/downloader",
+      "title": "Скачать музыку с Suno бесплатно – Suno Downloader",
+      "description": "Скачивайте музыку с Suno в форматах MP3, M4A или WAV бесплатно. Вставьте ссылку на песню Suno и сохраните аудио прямо в браузере."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/game-music-list",
+      "title": "Suno AI Game Music List — Style Keywords | usesuno",
+      "description": "Browse 10 Game Music style keywords for Suno prompts, including chiptune, battle, fantasy, menu, arcade, and cinematic score contexts for games and scenes., ..."
+    },
+    {
+      "url": "https://usesuno.com/research/suno-audio-download-report/data/usesuno-suno-audio-study-design.json"
+    },
+    {
+      "url": "https://usesuno.com/features",
+      "title": "Suno Features: v6, v6-wild, v6-mini, Stems & Studio 2.0",
+      "description": "Unofficial Suno v6 feature guide: compare v6, v6-wild, and v6-mini, then explore editing, mashups, Voices, stems, and Studio., Don’t Make It Beautiful by Ton..."
+    },
+    {
+      "url": "https://usesuno.com/articles",
+      "title": "The Suno Creator Field Guide to Better Songs",
+      "description": "Explore an editorially organized Suno creator field guide covering Suno downloads, file formats, policy, prompt workflow, lyrics, vocals, and song fixes."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/build-from-song-brief",
+      "title": "Build a Suno Prompt from a Song Brief | usesuno.com",
+      "description": "Learn to extract genre, vocals, instruments, mood, tempo, structure, and production from a song brief, then write one clear, concise Suno prompt."
+    },
+    {
+      "url": "https://usesuno.com/guide",
+      "title": "Suno Guide: Prompting, Lyrics, Styles & Troubleshooting",
+      "description": "Practical Suno guides for prompting, lyrics, Styles, song creation, and troubleshooting. Choose the next route, tool, or reference for your song."
+    },
+    {
+      "url": "https://usesuno.com/extensions",
+      "title": "Suno Chrome Extensions | UseSuno",
+      "description": "Explore independent UseSuno Chrome extensions for managing Suno Style prompts and organizing music-generation queues."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/acoustic-electronic-instruments",
+      "title": "Acoustic vs Electronic Instruments for Suno | usesuno.com",
+      "description": "Learn to distinguish acoustic, electric, and electronic instrument cues, including acoustic guitar, piano, strings, synths, and drum machines in Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/vocals",
+      "title": "Suno Vocal Prompt: Duet, Falsetto, Harmony",
+      "description": "Suno vocal Style: solo vs duet, delivery (belt, whisper, falsetto), harmony behaviour. Copy-paste phrases and Prompt Builder links. Unofficial."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/rock-list",
+      "title": "Suno AI Rock List — Style Keywords | usesuno",
+      "description": "Browse 376 Rock Style keywords for Suno prompts, spanning subgenres, regional scenes, and fusions, with Chinese glosses and section search tools."
+    },
+    {
+      "url": "https://usesuno.com/articles/suno-download-not-working",
+      "title": "Suno Download Not Working: Common Causes and Fixes",
+      "description": "Suno download not working? Check the account route, public link, missing MP4, browser playback, file permissions, and practical fixes in order on desktop."
+    },
+    {
+      "url": "https://usesuno.com/terms",
+      "title": "Terms of Use: site & extension | usesuno.com",
+      "description": "Read the terms for usesuno.com and Suno Prompt Manager, including disclaimers, warranties, liability limits, and independent project status."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/vocal-delivery",
+      "title": "Direct Vocal Delivery in Suno Prompts | usesuno.com",
+      "description": "Practice restrained, conversational, whispered, powerful, legato, and staccato vocal-delivery cues and section-level contrasts in clear Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/african-list",
+      "title": "Suno AI African Music List — Style Keywords | usesuno",
+      "description": "Browse 14 African music style keywords for Suno prompts, covering Afrobeats, amapiano, regional pop, and traditional fusions, with Chinese glosses and ideas...."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/resolve-prompt-conflicts",
+      "title": "Resolve Conflicts in Suno Prompts | usesuno.com",
+      "description": "Learn to diagnose and repair conflicting vocal, tempo, energy, space, structure, instrument, and tonal cues by setting priority or scope in Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/production-review-challenge",
+      "title": "Suno Production Prompt Review Challenge | usesuno.com",
+      "description": "Review production character, space, width, reverb, tonal balance, and era in a 10-question Suno prompt challenge built around one-variable tests."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/rock-metal",
+      "title": "Suno Rock & Metal Prompts: Style Tags | usesuno",
+      "description": "Prompt Rock and Metal more clearly in Suno: guitars, drum feel, vocal grit, subgenre buckets, and copy-ready lines from indie rock to metalcore., Fault Line ..."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/final-prompt-challenge",
+      "title": "Final Suno Prompt Course Challenge | usesuno.com",
+      "description": "Test the full Suno prompt workflow in 10 questions about briefs, useful cues, genre, vocals, instruments, mood, structure, production, editing, and diagnosis."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/southeast-asian-list",
+      "title": "Suno AI Southeast Asian List — Style Keywords | usesuno",
+      "description": "Browse 12 Southeast Asian Music Style keywords for Suno prompts, covering mainland and island traditions, regional pop, and modern fusion contexts."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/remove-prompt-repetition",
+      "title": "Remove Repetition from Suno Prompts | usesuno.com",
+      "description": "Learn to remove repeated genre, mood, vocal, structure, and production language while preserving every distinct audible job in a concise Suno prompt."
+    },
+    {
+      "url": "https://usesuno.com/guide/tags",
+      "title": "Suno Structure Tags Reference: Verse, Chorus & Outro",
+      "description": "Copy Suno tags for the Lyrics box and learn what Verse, Chorus, Outro, vocal, break, and transition labels ask for without treating them as guarantees."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/experimental-list",
+      "title": "Suno AI Experimental List — Style Keywords | usesuno",
+      "description": "Browse 10 Experimental music style keywords for Suno prompts, including avant-garde, noise, abstract, and deconstructed lanes with Chinese glosses and ideas."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/hip-hop-list",
+      "title": "Suno AI Hip-Hop & Rap List — Style Keywords | usesuno",
+      "description": "Browse 484 Hip-Hop and Rap Style keywords for Suno prompts, spanning microgenres, regional scenes, and fusions, with Chinese glosses and search."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/world-regional",
+      "title": "Suno World & Regional Prompts: Style Tags | usesuno",
+      "description": "Build World and Regional Suno prompts with one primary lane, signature percussion or instruments, and restrained fusion instead of vague labels., Sun on the ..."
+    },
+    {
+      "url": "https://usesuno.com/articles/how-to-download-suno-videos",
+      "title": "How to Download Suno Videos from a Song Link",
+      "description": "Learn how to download a Suno video from Library or a public song link, check MP4 availability, save it on mobile or desktop, and use it responsibly today."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/religious-gospel-list",
+      "title": "Suno AI Religious & Gospel List — Style Keywords | usesuno",
+      "description": "Browse 12 Religious and Gospel Style keywords for Suno prompts, covering worship, choir, spiritual, devotional, and contemporary faith contexts."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/viral-music-list",
+      "title": "Suno AI Viral & Short-Form List — Style Keywords | usesuno",
+      "description": "Browse 7 experimental Suno prompt ideas for hook-forward writing, clean loops, compact arrangements, and short-form mixes—without platform-performance claims."
+    },
+    {
+      "url": "https://usesuno.com/articles/troubleshoot-weak-suno-song-results",
+      "title": "How to Troubleshoot Weak Suno Song Results",
+      "description": "Troubleshoot weak Suno song results by tracing problems to style, lyrics, arrangement, vocals, or production, then making the smallest useful prompt change."
+    },
+    {
+      "url": "https://usesuno.com/id/tools/downloader",
+      "title": "Suno Downloader – Download Lagu Suno MP3 Gratis",
+      "description": "Downloader Suno gratis: download lagu Suno publik sebagai MP3, WAV, audio asli, video MP4, atau cover art. Tidak perlu akun UseSuno."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/energy-levels",
+      "title": "Control Energy in Suno Prompts | usesuno.com",
+      "description": "Learn low, medium, and high musical energy, separate intensity from tempo and loudness, then practice writing section energy curves for Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/articles/how-to-download-a-suno-song",
+      "title": "How to Download a Suno Song: Step-by-Step",
+      "description": "Learn how to download a Suno song from Library or Workspace, choose audio or video, save several tracks, and understand public-link and usage limits now."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/vocal-types",
+      "title": "Choose Vocal Types for Suno Prompts | usesuno.com",
+      "description": "Learn how to request male vocals, female vocals, lead and backing voices, duets, choirs, baritone, alto, and soprano singer roles in clear Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/folk-acoustic",
+      "title": "Suno Folk & Acoustic Prompts: Style Tags | usesuno",
+      "description": "Prompt Folk and Acoustic in Suno with story-led vocals, organic room tone, and string textures, plus indie folk, Americana, and roots Style lines., The Porch..."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre",
+      "title": "Music genres for Suno: Genre hub & prompt lanes",
+      "description": "Browse Suno music genre guides covering fusion basics and prompt controls for Pop, Hip-Hop, EDM, Rock, R&B, Jazz, Folk, World, and Ambient music."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/indian-south-asian-list",
+      "title": "Suno AI Indian & South Asian List — Style Keywords | usesuno",
+      "description": "Browse 14 Indian and South Asian Style keywords for Suno prompts, spanning classical, film, devotional, folk-pop, and regional fusion contexts."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/middle-eastern-list",
+      "title": "Suno AI Middle Eastern List — Style Keywords | usesuno",
+      "description": "Browse 9 Middle Eastern music style keywords for Suno prompts, covering Arabic, Turkish, Persian, Levantine, traditional, and modern contexts and fusions."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/jazz-blues",
+      "title": "Suno Jazz & Blues Prompts: Style Tags | usesuno",
+      "description": "Prompt Jazz and Blues in Suno: swing feel, club-room jazz, soul-jazz swagger, and blues-rock grit. Includes ensemble cues and copy-ready Style lines., Last T..."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/build-and-release",
+      "title": "Build and Release Tension in Suno Prompts | usesuno.com",
+      "description": "Learn to write clear build, pause, arrival, release, and strip-back cues that create section contrast and forward motion in beginner Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/latin-list",
+      "title": "Suno AI Latin Music List — Style Keywords | usesuno",
+      "description": "Browse 23 Latin Music Style keywords for Suno prompts, including salsa, cumbia, bachata, reggaeton, regional traditions, and modern pop fusions., Table for T..."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/country-list",
+      "title": "Suno AI Country List — Style Keywords | usesuno",
+      "description": "Browse 22 Country and Americana Style keywords for Suno prompts, including bluegrass, outlaw, Nashville, and regional lanes with Chinese glosses., County Lin..."
+    },
+    {
+      "url": "https://usesuno.com/articles/blend-genres-suno-clear-results",
+      "title": "How to Blend Genres in Suno Without Muddy Results",
+      "description": "Blend genres in Suno with a clear primary style, selected secondary traits, compatible rhythms, and controlled instrumentation instead of stacking vague labe..."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/genre-review-challenge",
+      "title": "Suno Prompt Genre Review Challenge | usesuno.com",
+      "description": "Test genre recognition, subgenre recall, genre-to-sound matching, and coherent hybrid choices in a ten-question Suno prompt genre review challenge."
+    },
+    {
+      "url": "https://usesuno.com/it/tools/downloader",
+      "title": "Scarica canzoni Suno in MP3 e MP4 | UseSuno",
+      "description": "Downloader Suno gratuito: salva una canzone pubblica in MP3, WAV, audio originale, video MP4 o copertina. Nessun account usesuno richiesto."
+    },
+    {
+      "url": "https://usesuno.com/research/suno-audio-download-report",
+      "title": "Suno Audio Study: Source, MP3 and WAV | UseSuno",
+      "description": "A technical baseline from 48 controlled Suno v6 tracks compares generation-to-generation variation with 192 kbps MP3 conversion and local PCM WAV measurements."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/genres",
+      "title": "Suno AI Genre Dictionary — Style Keywords | usesuno",
+      "description": "Compare broad music genres with English Suno Style keywords, Chinese, Japanese, and Spanish labels, short definitions, and deep-dive guide links., Afterglow ..."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/instrument-families",
+      "title": "Suno Instrument Families for Prompts | usesuno.com",
+      "description": "Learn strings, brass, woodwinds, percussion, keyboards, and guitar-family instruments, then practice choosing accurate instrument cues for Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/structure-review-challenge",
+      "title": "Suno Song Structure Review Challenge | usesuno.com",
+      "description": "Review verse, chorus, intro, bridge, outro, build, release, chorus lift, and section-level prompt decisions in a 10-question Suno structure challenge."
+    },
+    {
+      "url": "https://usesuno.com/guide/troubleshooting",
+      "title": "Suno Troubleshooting: Common Issues & Fixes",
+      "description": "Suno problems by symptom: abrupt ending, wrong vocals, busy mix, random results. Causes and what to change in Style and lyrics. Unofficial guide."
+    },
+    {
+      "url": "https://usesuno.com/tools/timing",
+      "title": "Suno Lyrics Length & Duration Estimator Tool",
+      "description": "Estimate Suno lyrics duration from syllables and pace, review a per-section breakdown, and spot unusually long verse or chorus blocks in your browser."
+    },
+    {
+      "url": "https://usesuno.com/articles/suno-vocal-prompt-framework",
+      "title": "Suno Vocal Prompts: A Clear Direction Framework",
+      "description": "Build clearer Suno vocal prompts by separating singer character, delivery, register, phrasing, and mix position, with practical wording and revision checks."
+    },
+    {
+      "url": "https://usesuno.com/es/tools/downloader",
+      "title": "Descargar Suno MP3 Gratis – Suno Downloader",
+      "description": "Descarga música de Suno en MP3, M4A o WAV gratis. Pega el enlace de una canción de Suno y descarga el audio directamente desde tu navegador."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/instruments-list",
+      "title": "Suno AI Instruments List — Style Keywords | usesuno",
+      "description": "Browse 12 instrument and texture terms for Suno Style prompts, with role-based wording, optional Chinese glosses, search, and copy controls."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/punk-list",
+      "title": "Suno AI Punk & Hardcore List — Style Keywords | usesuno",
+      "description": "Browse 16 Punk and Hardcore style keywords for Suno prompts, covering classic punk, Oi, melodic branches, post-hardcore, and raw scene variants and fusions.,..."
+    },
+    {
+      "url": "https://usesuno.com/fr/tools/downloader",
+      "title": "Télécharger Suno MP3 gratuitement – Suno Downloader",
+      "description": "Téléchargez vos musiques Suno en MP3, M4A ou WAV gratuitement. Collez le lien d’une chanson Suno et récupérez l’audio directement depuis votre navigateur."
+    },
+    {
+      "url": "https://usesuno.com/styles",
+      "title": "Suno Style Prompt Library: Search, Copy and Test",
+      "description": "Browse practical Suno Style prompt examples by genre and mood, then copy, revise, and test each line with a clear workflow for more controlled song results."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/reggae-list",
+      "title": "Suno AI Reggae & Caribbean List — Style Keywords | usesuno",
+      "description": "Browse 12 Reggae and Caribbean style keywords for Suno prompts, including roots, dub, ska-related, dancehall, and bass-led rhythmic style lanes and ideas., R..."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference/classical-list",
+      "title": "Suno AI Classical List — Style Keywords | usesuno",
+      "description": "Browse 28 Classical music Style keywords for Suno prompts, spanning eras, forms, ensembles, and modern art music, with optional Chinese glosses., Map of the ..."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/warm-bright-dark",
+      "title": "Warm, Bright, and Dark Sound in Suno Prompts | usesuno.com",
+      "description": "Learn how warm, bright, and dark describe audible tonal color in vocals, instruments, and a mix, then repair vague or conflicting Suno prompt cues."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/melody-instruments",
+      "title": "Use Melody Instruments in Suno Prompts | usesuno.com",
+      "description": "Practice writing piano, guitar, strings, flute, saxophone, and synth-lead cues that give melody instruments a clear, audible role in Suno prompts."
+    },
+    {
+      "url": "https://usesuno.com/guide/reference",
+      "title": "Suno AI Style Reference — Genre & Prompt Keywords | usesuno",
+      "description": "Use the Suno Style Reference to find English genre and prompt keywords, multilingual glosses, category vocabulary, and deep-dive playbook links."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/review",
+      "title": "Review Your Suno Prompt Skills | usesuno.com",
+      "description": "Review weak and due Suno prompt skills from your browser-local course progress, then return to the lesson that can strengthen each cue."
+    },
+    {
+      "url": "https://usesuno.com/guide/mood",
+      "title": "Suno Mood & Atmosphere: atmosphere in Style",
+      "description": "Suno mood Style: use hearable adjectives (introspective, nocturnal) not review hype. Examples, copy-paste lines, Prompt Builder. Unofficial guide."
+    },
+    {
+      "url": "https://usesuno.com/articles/suno-mp3-vs-wav-vs-mp4",
+      "title": "Suno MP3 vs WAV vs MP4: Which File to Choose",
+      "description": "Suno MP3 vs WAV vs MP4 explained: compare file size, editing quality, video use, account limits, mobile behavior, and the right download route for creators."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/mood-review-challenge",
+      "title": "Suno Mood, Energy, and Tempo Review Challenge | usesuno.com",
+      "description": "Review mood, energy, tempo, movement, section curves, conflict repair, and targeted prompt testing in a practical 10-question Suno course challenge."
+    },
+    {
+      "url": "https://usesuno.com/tools/diff",
+      "title": "Lyrics Text Diff for Suno — Compare Two Versions",
+      "description": "Compare Suno lyric drafts in a private browser diff with aligned lines, character counts, change labels, synchronized scrolling, guides and focus mode."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/vocal-review-challenge",
+      "title": "Suno Vocal Prompt Review Challenge | usesuno.com",
+      "description": "Review singer roles, vocal tone, delivery, harmony, duet, choir, and section contrast in a practical 10-question Suno vocal-prompt unit challenge."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/pop/chamber-pop",
+      "title": "Suno Chamber Pop Prompts: Style Tags & Examples | usesuno",
+      "description": "Study two published Suno v5.5 Chamber Pop generations, compare their Style prompts, and see which genre, instrument, vocal, mood, and mix cues stayed stable...."
+    },
+    {
+      "url": "https://usesuno.com/articles/how-to-use-usesuno-mv-studio",
+      "title": "How to Use UseSuno MV Studio for Lyric Videos",
+      "description": "UseSuno MV Studio turns local audio and timed lyrics into a lyric video. Learn the animation styles, LRC workflow, Suno lyric download path, and export options."
+    },
+    {
+      "url": "https://usesuno.com/guide/learn/instrument-roles",
+      "title": "Describe Instrument Roles in Suno Prompts | usesuno.com",
+      "description": "Practice instrument roles, playing textures, and section placement. Learn to turn a list of instruments into a clear, testable Suno arrangement prompt."
+    },
+    {
+      "url": "https://usesuno.com/tools/formatter",
+      "title": "Suno Lyrics Structure Tag Helper for Drafts",
+      "description": "Add and organize Suno lyrics structure tags such as [Verse], [Chorus] and [Bridge], tidy spacing, and flag unknown labels directly in your browser locally."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/experimental-ambient",
+      "title": "Suno Experimental & Ambient Prompts: Style Tags | usesuno",
+      "description": "Experimental & ambient Suno prompts: texture, decay, sparse grids, and one clear experimental cue; without pop chorus habits. Unofficial guide., Fractured Si..."
+    },
+    {
+      "url": "https://usesuno.com/guide/genre/rock-metal/post-rock",
+      "title": "Suno Post-Rock Prompts: Style Tags & Examples | usesuno",
+      "description": "Prompt Post-Rock in Suno with gradual builds, spacious guitars, dynamic drums, and wordless peaks, plus copy-ready Style lines and testing advice., Just a gh..."
+    },
+    {
+      "url": "https://usesuno.com/research/suno-audio-download-report/data/usesuno-suno-audio-study-stats.csv",
+      "title": "usesuno.com",
+      "description": "scope,group,metric,n,mean,median,min,max,standard_deviation,positive_n,negative_n,zero_n overall,all,source_low_energy_ratio,48,0.727386409606,0.72300478295,0. ..."
+    },
+    {
+      "url": "https://usesuno.com/research/suno-audio-download-report/data/usesuno-suno-audio-study-conditions.csv",
+      "title": "usesuno.com",
+      "description": "scope,group,metric,n,mean,median,min,max,standard_deviation,positive_n,negative_n,zero_n condition,bass,source_low_energy_ratio,24,0.7312802391,0.72300478295,0. ..."
+    }
+  ]
+}
