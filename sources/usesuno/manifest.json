@@ -1,0 +1,67 @@
+{
+  "source_id": "usesuno.com",
+  "source_url": "https://usesuno.com/",
+  "observed_on": "2026-11-08",
+  "purpose": "Public capability reconnaissance for EAR-REA-ChaChaCha clean-room assembly into the Lokivelli stack.",
+  "strategy": {
+    "browser_local_utilities": "REBUILD_ORIGINAL",
+    "lyrics_mv_studio": "REUSE_SEPARATE_LICENSED_COMPONENT",
+    "rea": "CONNECT_MCP"
+  },
+  "public_surface": {
+    "mapped_urls": 168,
+    "tools_crawl": {
+      "status": "completed",
+      "pages_completed": 18,
+      "pages_total": 18,
+      "crawl_id": "01a1bb7a-19d1-7703-afa3-9a3f63cd7bc0",
+      "urls": [
+        "https://usesuno.com/tools",
+        "https://usesuno.com/tools/builder/",
+        "https://usesuno.com/tools/lyrics-mv/",
+        "https://usesuno.com/tools/normalize/",
+        "https://usesuno.com/tools/timing/",
+        "https://usesuno.com/tools/exclude/",
+        "https://usesuno.com/tools/downloader/",
+        "https://usesuno.com/tools/playlist/",
+        "https://usesuno.com/tools/cleaner/",
+        "https://usesuno.com/tools/diff/",
+        "https://usesuno.com/tools/parser/",
+        "https://usesuno.com/tools/batch/",
+        "https://usesuno.com/tools/random/",
+        "https://usesuno.com/tools/formatter/",
+        "https://usesuno.com/tools/profile-downloader/",
+        "https://usesuno.com/tools/cover/",
+        "https://usesuno.com/tools/lyrics-timestamp/",
+        "https://usesuno.com/tools/album/"
+      ]
+    }
+  },
+  "observed_capability_families": [
+    "prompt builder",
+    "lyrics diff",
+    "lyrics timestamping",
+    "structure tag helper",
+    "lyrics tag normalization",
+    "random style generation",
+    "song inspector",
+    "duration estimator",
+    "style string cleaner",
+    "exclude builder",
+    "public song downloads",
+    "bulk public-link processing",
+    "cover art retrieval",
+    "public playlist retrieval",
+    "public album retrieval",
+    "public profile analysis",
+    "local lyric MV creation"
+  ],
+  "boundaries": {
+    "public_only": true,
+    "no_auth_bypass": true,
+    "no_captcha_bypass": true,
+    "no_secret_collection": true,
+    "no_wholesale_source_copy": true,
+    "respect_component_licenses": true
+  }
+}
