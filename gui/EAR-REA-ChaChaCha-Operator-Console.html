@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050505">
+<title>EAR • REA • CHA CHA CHA — Operator Console</title>
+<style>
+:root{
+  --bg:#050505;
+  --panel:#0d0f0d;
+  --panel2:#141714;
+  --ink:#f8f8f2;
+  --muted:#a9b0a7;
+  --orange:#ff6a00;
+  --green:#57ff38;
+  --yellow:#ffe600;
+  --red:#ff3657;
+  --cyan:#55eaff;
+  --line:#30372f;
+  --radius:18px;
+  --font-scale:1;
+  --button-h:58px;
+  --shadow:0 14px 45px rgba(0,0,0,.42);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);font-size:calc(16px * var(--font-scale));scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 18% -10%, rgba(255,106,0,.15), transparent 32%),
+    radial-gradient(circle at 100% 0%, rgba(87,255,56,.08), transparent 28%),
+    var(--bg);
+  color:var(--ink);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  line-height:1.45;
+  min-height:100vh;
+}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+a{color:var(--cyan)}
+.shell{max-width:1500px;margin:0 auto;padding:18px 18px 100px}
+.topbar{
+  position:sticky;top:0;z-index:30;
+  display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;
+  margin:-18px -18px 18px;padding:14px 18px;
+  border-bottom:1px solid var(--line);
+  background:rgba(5,5,5,.92);backdrop-filter:blur(14px)
+}
+.brand{display:flex;gap:12px;align-items:center;min-width:0}
+.mark{
+  width:46px;height:46px;border:2px solid var(--yellow);border-radius:14px;
+  display:grid;place-items:center;font-weight:950;color:var(--yellow);
+  box-shadow:0 0 0 3px rgba(255,230,0,.08),inset 0 0 24px rgba(255,106,0,.11)
+}
+.brand h1{font-size:1.05rem;margin:0;letter-spacing:.035em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand small{display:block;color:var(--muted);font-weight:700}
+.status-row{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.chip{
+  border:1px solid var(--line);border-radius:999px;padding:7px 10px;
+  font-size:.76rem;font-weight:900;letter-spacing:.05em;background:#101310;color:var(--muted)
+}
+.chip.pass{border-color:rgba(87,255,56,.45);color:var(--green)}
+.chip.partial{border-color:rgba(255,230,0,.45);color:var(--yellow)}
+.chip.blocked{border-color:rgba(255,54,87,.45);color:var(--red)}
+.grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(340px,.75fr);gap:18px}
+.stack{display:grid;gap:18px}
+.card{
+  background:linear-gradient(180deg,rgba(19,23,19,.96),rgba(10,12,10,.98));
+  border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden
+}
+.card-head{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;gap:12px;justify-content:space-between;align-items:center}
+.card-head h2{margin:0;font-size:1rem;letter-spacing:.04em}
+.card-body{padding:18px}
+.sub{color:var(--muted);font-size:.88rem;margin-top:4px}
+.hero{
+  padding:20px;border:1px solid rgba(255,106,0,.45);border-radius:22px;
+  background:linear-gradient(120deg,rgba(255,106,0,.11),rgba(87,255,56,.04) 55%,rgba(255,230,0,.05));
+}
+.hero h2{font-size:clamp(1.55rem,4vw,2.8rem);line-height:1.04;margin:0 0 10px;letter-spacing:-.03em}
+.hero strong{color:var(--yellow)}
+.hero p{color:#d5dad2;max-width:900px;margin:.55rem 0 0}
+.loop{display:grid;grid-template-columns:repeat(6,minmax(116px,1fr));gap:10px;margin-top:16px}
+.step{
+  min-height:110px;padding:14px;border-radius:16px;border:1px solid var(--line);background:#0b0d0b;
+  display:flex;flex-direction:column;justify-content:space-between
+}
+.step .n{font-size:.72rem;color:var(--muted);font-weight:900}
+.step b{font-size:.95rem}
+.step.active{border-color:var(--orange);box-shadow:inset 0 0 0 1px rgba(255,106,0,.22)}
+.step.active b{color:var(--orange)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;padding:12px;border-bottom:1px solid var(--line);background:#090b09}
+.tab{
+  min-height:46px;border:1px solid var(--line);border-radius:12px;background:#111411;color:var(--muted);
+  padding:0 14px;font-weight:900
+}
+.tab[aria-selected="true"]{background:var(--orange);border-color:var(--orange);color:#090909}
+.panel{display:none}.panel.active{display:block}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  min-height:var(--button-h);border-radius:14px;border:1px solid var(--line);
+  padding:0 16px;background:#141714;color:var(--ink);font-weight:950;letter-spacing:.015em
+}
+.btn.primary{background:var(--orange);border-color:var(--orange);color:#080808}
+.btn.green{background:var(--green);border-color:var(--green);color:#071006}
+.btn.yellow{background:var(--yellow);border-color:var(--yellow);color:#111000}
+.btn.danger{background:#321019;border-color:#7e2137;color:#ffd8e0}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.field{display:grid;gap:7px}
+.field.full{grid-column:1/-1}
+label{font-size:.78rem;color:var(--muted);font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+input,select,textarea{
+  width:100%;border:1px solid #394238;background:#080a08;color:var(--ink);
+  border-radius:13px;padding:13px 14px;outline:none
+}
+textarea{min-height:108px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(255,106,0,.12)}
+.strategy{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.strategy button{
+  min-height:64px;border:1px solid var(--line);background:#0b0d0b;color:var(--ink);border-radius:14px;font-weight:950
+}
+.strategy button.active{border-color:var(--yellow);color:var(--yellow);box-shadow:inset 0 0 0 1px rgba(255,230,0,.24)}
+.mono{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  background:#070807;border:1px solid #2e352d;border-radius:14px;padding:14px;overflow:auto;white-space:pre-wrap;word-break:break-word
+}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.kpi{padding:14px;border:1px solid var(--line);border-radius:14px;background:#0b0d0b}
+.kpi b{display:block;font-size:1.45rem;line-height:1.1}
+.kpi span{color:var(--muted);font-size:.77rem;font-weight:800}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:14px}
+table{border-collapse:collapse;width:100%;min-width:760px;background:#090b09}
+th,td{padding:12px 13px;border-bottom:1px solid #242a23;text-align:left;vertical-align:top}
+th{position:sticky;top:0;background:#101310;color:#c7cdc4;font-size:.74rem;text-transform:uppercase;letter-spacing:.05em}
+td{font-size:.86rem}
+.badge{
+  display:inline-block;padding:5px 8px;border-radius:999px;font-size:.7rem;font-weight:950;border:1px solid var(--line)
+}
+.badge.pass{color:var(--green);border-color:rgba(87,255,56,.4)}
+.badge.partial{color:var(--yellow);border-color:rgba(255,230,0,.4)}
+.badge.notrun{color:#b8c0b6}
+.badge.blocked{color:var(--red);border-color:rgba(255,54,87,.42)}
+.callout{border-left:4px solid var(--yellow);background:rgba(255,230,0,.06);padding:12px 14px;border-radius:0 12px 12px 0}
+.callout.red{border-left-color:var(--red);background:rgba(255,54,87,.07)}
+.callout.green{border-left-color:var(--green);background:rgba(87,255,56,.06)}
+.list{display:grid;gap:10px}
+.row{
+  display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;
+  padding:12px 13px;border:1px solid var(--line);border-radius:13px;background:#0a0c0a
+}
+.row strong{display:block}
+.row small{color:var(--muted)}
+.route{
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px
+}
+.route .node{padding:12px;border:1px solid var(--line);border-radius:13px;background:#090b09;text-align:center;font-weight:900}
+.route .node small{display:block;color:var(--muted);font-weight:700;margin-top:4px}
+.controls{display:grid;gap:14px}
+.range{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+input[type=range]{padding:0;border:0;background:transparent}
+.footer{
+  margin-top:18px;color:var(--muted);font-size:.78rem;text-align:center
+}
+.toast{
+  position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(120px);
+  background:#171b17;color:white;border:1px solid var(--line);border-radius:999px;padding:11px 16px;
+  opacity:0;transition:.22s;z-index:100;box-shadow:var(--shadow);font-weight:850
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+hr{border:0;border-top:1px solid var(--line);margin:16px 0}
+@media(max-width:980px){
+  .grid{grid-template-columns:1fr}
+  .loop{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:680px){
+  .shell{padding:10px 10px 92px}
+  .topbar{margin:-10px -10px 12px;padding:10px;grid-template-columns:1fr}
+  .status-row{justify-content:flex-start}
+  .brand small{display:none}
+  .loop{grid-template-columns:repeat(2,1fr)}
+  .form-grid,.strategy,.kpis,.route{grid-template-columns:1fr}
+  .card-body{padding:14px}
+}
+.high-contrast{
+  --bg:#000;
+  --panel:#000;
+  --panel2:#000;
+  --line:#686868;
+  --muted:#d8d8d8;
+}
+.reduce-motion *{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="topbar">
+    <div class="brand">
+      <div class="mark">EAR</div>
+      <div>
+        <h1>EAR • REA • CHA CHA CHA</h1>
+        <small>Federated Engineering Operator Console</small>
+      </div>
+    </div>
+    <div class="status-row">
+      <span class="chip partial">PLATFORM: PARTIAL</span>
+      <span class="chip partial">REA: CONFIGURED / NOT VERIFIED</span>
+      <span class="chip pass">REPO STATIC CHECKS: PASS</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Extract. Assemble. Rebuild. <strong>Verify every Cha.</strong></h2>
+    <p>Feature ≠ identity. Rebuild ≠ connect. Discover ≠ install. Proposal ≠ proof. This console keeps evidence, strategy, adapter boundaries, and verification states visible instead of collapsing them into one fake “done” light.</p>
+    <div class="loop" id="loopSteps">
+      <div class="step active"><span class="n">01</span><b>SPOT</b><span class="sub">Queue capability</span></div>
+      <div class="step"><span class="n">02</span><b>INVESTIGATE</b><span class="sub">Evidence + provenance</span></div>
+      <div class="step"><span class="n">03</span><b>CHOOSE</b><span class="sub">Rebuild / reuse / connect</span></div>
+      <div class="step"><span class="n">04</span><b>ASSEMBLE</b><span class="sub">Federate, don’t fuse</span></div>
+      <div class="step"><span class="n">05</span><b>VERIFY</b><span class="sub">Run the test plan</span></div>
+      <div class="step"><span class="n">06</span><b>CHA CHA CHA</b><span class="sub">Receipt → next bounded pass</span></div>
+    </div>
+  </section>
+
+  <div style="height:18px"></div>
+
+  <div class="grid">
+    <main class="stack">
+      <section class="card">
+        <div class="tabs" role="tablist">
+          <button class="tab" data-tab="mission" aria-selected="true">CHA CONSOLE</button>
+          <button class="tab" data-tab="register">FEATURE REGISTER</button>
+          <button class="tab" data-tab="rea">REA BRIDGE</button>
+          <button class="tab" data-tab="evidence">EVIDENCE</button>
+          <button class="tab" data-tab="receipts">RECEIPTS</button>
+        </div>
+
+        <div id="mission" class="panel active">
+          <div class="card-body">
+            <div class="form-grid">
+              <div class="field">
+                <label for="featureId">Feature ID</label>
+                <input id="featureId" value="EAR-0008" autocomplete="off">
+              </div>
+              <div class="field">
+                <label for="sourceName">Source / Provider</label>
+                <input id="sourceName" placeholder="App, repo, site, device, API">
+              </div>
+              <div class="field full">
+                <label for="intent">Operator intent</label>
+                <textarea id="intent" placeholder="Exact operator target. Keep it uncompressed."></textarea>
+              </div>
+              <div class="field">
+                <label for="sourceVersion">Source version / ref</label>
+                <input id="sourceVersion" placeholder="version, commit, URL, release">
+              </div>
+              <div class="field">
+                <label for="license">License / constraints</label>
+                <input id="license" placeholder="MIT / AGPL / public behavior / operator-owned">
+              </div>
+              <div class="field full">
+                <label>Strategy</label>
+                <div class="strategy" id="strategyGroup">
+                  <button data-strategy="REBUILD" class="active">REBUILD</button>
+                  <button data-strategy="REUSE">REUSE</button>
+                  <button data-strategy="CONNECT">CONNECT</button>
+                </div>
+              </div>
+              <div class="field full">
+                <label for="testPlan">Test plan / acceptance boundary</label>
+                <textarea id="testPlan" placeholder="What must be mechanically reproduced before PASS?"></textarea>
+              </div>
+            </div>
+            <hr>
+            <div class="btnrow">
+              <button class="btn primary" id="buildEnvelope">BUILD CHA ENVELOPE</button>
+              <button class="btn yellow" id="copyEnvelope">COPY JSON</button>
+              <button class="btn" id="downloadEnvelope">EXPORT JSON</button>
+              <button class="btn" id="clearMission">CLEAR</button>
+            </div>
+            <div style="height:12px"></div>
+            <div class="mono" id="envelopePreview">No envelope built yet.</div>
+          </div>
+        </div>
+
+        <div id="register" class="panel">
+          <div class="card-body">
+            <div class="callout">This view mirrors the currently known register state. A browser GUI cannot certify runtime tests it did not execute.</div>
+            <div style="height:12px"></div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>ID</th><th>Capability</th><th>Strategy</th><th>Status</th><th>Runtime note</th></tr></thead>
+                <tbody id="featureTable"></tbody>
+              </table>
+            </div>
+            <div style="height:12px"></div>
+            <div class="btnrow">
+              <button class="btn" id="exportRegister">EXPORT REGISTER SNAPSHOT</button>
+              <label class="btn" style="display:inline-flex;align-items:center">
+                IMPORT REGISTER JSON
+                <input type="file" id="importRegister" accept=".json,application/json" hidden>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div id="rea" class="panel">
+          <div class="card-body">
+            <div class="route">
+              <div class="node">EAR GUI<small>operator console</small></div>
+              <div class="node">ADAPTER<small>reverse-engineering.rea</small></div>
+              <div class="node">REA 6.8.0<small>MCP stdio</small></div>
+              <div class="node">TARGET RUNTIME<small>must pass guard</small></div>
+            </div>
+            <div style="height:14px"></div>
+            <div class="kpis">
+              <div class="kpi"><b>6.8.0</b><span>REA package version</span></div>
+              <div class="kpi"><b>MIT</b><span>REA license</span></div>
+              <div class="kpi"><b>MCP</b><span>stdio transport</span></div>
+              <div class="kpi"><b>NOT RUN</b><span>target runtime guard</span></div>
+            </div>
+            <div style="height:14px"></div>
+            <div class="field">
+              <label>Configured command</label>
+              <div class="mono" id="reaCommand">npx -y rea-agents@6.8.0 mcp</div>
+            </div>
+            <div style="height:12px"></div>
+            <div class="field">
+              <label>Required Node engine</label>
+              <div class="mono">^22.23.4 || ^24.22.1 || >=26.12.1</div>
+            </div>
+            <div style="height:12px"></div>
+            <div class="callout red"><b>Current status:</b> CONFIGURED_NOT_RUNTIME_VERIFIED. This console will not relabel it LIVE or PASS.</div>
+            <div style="height:14px"></div>
+            <div class="form-grid">
+              <div class="field full">
+                <label for="runtimeReceipt">Paste runtime guard receipt</label>
+                <textarea id="runtimeReceipt" placeholder='{"capability":"reverse-engineering.rea","status":"PASS",...}'></textarea>
+              </div>
+            </div>
+            <div class="btnrow">
+              <button class="btn yellow" id="checkReceipt">VALIDATE RECEIPT</button>
+              <button class="btn" id="copyReaCommand">COPY COMMAND</button>
+            </div>
+            <div style="height:12px"></div>
+            <div class="mono" id="receiptValidation">No runtime receipt loaded.</div>
+          </div>
+        </div>
+
+        <div id="evidence" class="panel">
+          <div class="card-body">
+            <div class="kpis">
+              <div class="kpi"><b>169</b><span>latest mapped public URLs</span></div>
+              <div class="kpi"><b>167</b><span>successfully scraped</span></div>
+              <div class="kpi"><b>2</b><span>environment blocked</span></div>
+              <div class="kpi"><b>18/18</b><span>/tools bounded crawl</span></div>
+            </div>
+            <div style="height:14px"></div>
+            <div class="list">
+              <div class="row"><div><strong>Latest URL map</strong><small>evidence/usesuno/2026-11-08-url-map-r2.json</small></div><span class="badge pass">CAPTURED</span></div>
+              <div class="row"><div><strong>Crawl receipts</strong><small>evidence/usesuno/2026-11-08-crawl-receipts.json</small></div><span class="badge pass">CAPTURED</span></div>
+              <div class="row"><div><strong>Source manifest</strong><small>sources/usesuno/manifest.json</small></div><span class="badge pass">CAPTURED</span></div>
+              <div class="row"><div><strong>Blocked CSV resources</strong><small>2 resources returned document_antibot after retry exhaustion</small></div><span class="badge blocked">BLOCKED</span></div>
+            </div>
+            <div style="height:14px"></div>
+            <div class="btnrow">
+              <a class="btn" style="display:inline-flex;align-items:center;text-decoration:none" target="_blank" rel="noopener" href="https://github.com/lokivelli316/ear-rea-chachacha/tree/main/evidence/usesuno">OPEN EVIDENCE DIR</a>
+              <a class="btn" style="display:inline-flex;align-items:center;text-decoration:none" target="_blank" rel="noopener" href="https://github.com/lokivelli316/ear-rea-chachacha/blob/main/FEATURE_REGISTER.md">OPEN REGISTER</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="receipts" class="panel">
+          <div class="card-body">
+            <div class="list" id="receiptList"></div>
+            <div style="height:14px"></div>
+            <div class="btnrow">
+              <button class="btn primary" id="newLocalReceipt">ADD LOCAL RECEIPT</button>
+              <button class="btn" id="exportReceipts">EXPORT RECEIPTS</button>
+              <button class="btn danger" id="clearReceipts">CLEAR LOCAL RECEIPTS</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="stack">
+      <section class="card">
+        <div class="card-head"><div><h2>SYSTEM STATE</h2><div class="sub">No premature certification</div></div></div>
+        <div class="card-body">
+          <div class="list">
+            <div class="row"><div><strong>Founding architecture</strong><small>Federated, not fused</small></div><span class="badge pass">RECORDED</span></div>
+            <div class="row"><div><strong>REA adapter</strong><small>adapter.json exists</small></div><span class="badge partial">CONFIGURED</span></div>
+            <div class="row"><div><strong>REA runtime</strong><small>target device execution</small></div><span class="badge notrun">NOT RUN</span></div>
+            <div class="row"><div><strong>UseSuno evidence</strong><small>mapped + bounded crawl</small></div><span class="badge pass">PASS</span></div>
+            <div class="row"><div><strong>On-device interactive GUI test</strong><small>this file on target phone</small></div><span class="badge notrun">NOT RUN</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-head"><div><h2>DISPLAY</h2><div class="sub">Phone-first / eye-friendly controls</div></div></div>
+        <div class="card-body controls">
+          <div class="range">
+            <div>
+              <label for="fontScale">Font scale</label>
+              <input type="range" id="fontScale" min="0.95" max="1.55" step="0.05" value="1">
+            </div>
+            <b id="fontScaleValue">100%</b>
+          </div>
+          <button class="btn" id="contrastToggle">HIGH CONTRAST: OFF</button>
+          <button class="btn" id="motionToggle">REDUCED MOTION: OFF</button>
+          <button class="btn" id="resetPrefs">RESET DISPLAY</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="card-head"><div><h2>BOUNDARIES</h2><div class="sub">Adapter contract visibility</div></div></div>
+        <div class="card-body">
+          <div class="list">
+            <div class="row"><div><strong>Federated, not fused</strong></div><span class="badge pass">TRUE</span></div>
+            <div class="row"><div><strong>Evidence required</strong></div><span class="badge pass">TRUE</span></div>
+            <div class="row"><div><strong>Risky action approval</strong></div><span class="badge pass">TRUE</span></div>
+            <div class="row"><div><strong>Bypass access controls</strong></div><span class="badge blocked">FALSE</span></div>
+            <div class="row"><div><strong>Copy protected source by default</strong></div><span class="badge blocked">FALSE</span></div>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <div class="footer">EAR • REA • CHA CHA CHA operator console — standalone browser artifact. Browser state is local to this device unless exported.</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  const $ = (s, root=document) => root.querySelector(s);
+  const $$ = (s, root=document) => [...root.querySelectorAll(s)];
+  const now = () => new Date().toISOString();
+
+  const seedFeatures = [
+    {id:"EAR-0001", capability:"Bounded coding lane / Generator Hands", strategy:"CONNECT", status:"NOT RUN", note:"Adapter proposed; integration not yet written or run."},
+    {id:"EAR-0002", capability:"Sister Stack chat", strategy:"REUSE", status:"PARTIAL", note:"Compiled; on-device tests NOT RUN. R1 connected-brain relay remains partial."},
+    {id:"EAR-0003", capability:"Sister floating overlay", strategy:"REA it, rebuild", status:"NOT RUN", note:"Queued; depends on chat."},
+    {id:"EAR-0004", capability:"Sister VRM body", strategy:"REUSE", status:"NOT RUN", note:"Queued; three-vrm candidate."},
+    {id:"EAR-0005", capability:"Voice + lip sync", strategy:"REA it, rebuild", status:"NOT RUN", note:"Queued; two-rest rule retained."},
+    {id:"EAR-0006", capability:"Screen seeing / MediaProjection", strategy:"BUILD FROM DOCS", status:"NOT RUN", note:"Consent and retention boundaries remain operator-controlled."},
+    {id:"EAR-0007", capability:"UseSuno crawl + REA stack assembly", strategy:"REBUILD / REUSE / CONNECT", status:"PARTIAL", note:"Evidence and repo static checks PASS; REA runtime + phone interaction NOT RUN."}
+  ];
+
+  let features = JSON.parse(localStorage.getItem("ear.features") || "null") || seedFeatures;
+  let strategy = "REBUILD";
+  let currentEnvelope = null;
+  let receipts = JSON.parse(localStorage.getItem("ear.receipts") || "[]");
+
+  function toast(msg){
+    const t=$("#toast");
+    t.textContent=msg;
+    t.classList.add("show");
+    clearTimeout(toast.timer);
+    toast.timer=setTimeout(()=>t.classList.remove("show"),1800);
+  }
+
+  function download(name, data, type="application/json"){
+    const blob=new Blob([data],{type});
+    const a=document.createElement("a");
+    a.href=URL.createObjectURL(blob);
+    a.download=name;
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},100);
+  }
+
+  async function copyText(text){
+    try{ await navigator.clipboard.writeText(text); toast("Copied"); }
+    catch{
+      const ta=document.createElement("textarea");
+      ta.value=text;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();toast("Copied");
+    }
+  }
+
+  function badgeClass(status){
+    if(status==="PASS") return "pass";
+    if(status==="PARTIAL") return "partial";
+    if(status.includes("BLOCK")) return "blocked";
+    return "notrun";
+  }
+
+  function renderFeatures(){
+    $("#featureTable").innerHTML=features.map(f=>`
+      <tr>
+        <td><b>${escapeHtml(f.id)}</b></td>
+        <td>${escapeHtml(f.capability)}</td>
+        <td>${escapeHtml(f.strategy)}</td>
+        <td><span class="badge ${badgeClass(f.status)}">${escapeHtml(f.status)}</span></td>
+        <td>${escapeHtml(f.note)}</td>
+      </tr>`).join("");
+  }
+
+  function renderReceipts(){
+    const base=[
+      {time:"2026-11-08",capability:"UseSuno URL mapping",status:"PASS",detail:"Latest captured map observed 169 public URLs."},
+      {time:"2026-11-08",capability:"UseSuno bounded /tools crawl",status:"PASS",detail:"18/18 pages."},
+      {time:"2026-11-08",capability:"Repository JavaScript syntax repair",status:"PASS",detail:"Exact GitHub file reparsed after commit 7ba825d."},
+      {time:"2026-11-08",capability:"REA target runtime execution",status:"NOT RUN",detail:"Must run scripts/check-rea-runtime.mjs on target runtime."},
+      {time:"2026-11-08",capability:"Interactive Samsung phone behavior",status:"NOT RUN",detail:"No on-device browser interaction receipt yet."}
+    ];
+    const all=[...base,...receipts];
+    $("#receiptList").innerHTML=all.map(r=>`
+      <div class="row">
+        <div><strong>${escapeHtml(r.capability)}</strong><small>${escapeHtml(r.time)} — ${escapeHtml(r.detail)}</small></div>
+        <span class="badge ${badgeClass(r.status)}">${escapeHtml(r.status)}</span>
+      </div>`).join("");
+  }
+
+  function escapeHtml(value){
+    return String(value ?? "").replace(/[&<>"']/g, m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#039;"}[m]));
+  }
+
+  $$(".tab").forEach(btn=>btn.addEventListener("click",()=>{
+    $$(".tab").forEach(b=>b.setAttribute("aria-selected","false"));
+    $$(".panel").forEach(p=>p.classList.remove("active"));
+    btn.setAttribute("aria-selected","true");
+    $("#"+btn.dataset.tab).classList.add("active");
+  }));
+
+  $$("#strategyGroup button").forEach(btn=>btn.addEventListener("click",()=>{
+    strategy=btn.dataset.strategy;
+    $$("#strategyGroup button").forEach(b=>b.classList.toggle("active",b===btn));
+  }));
+
+  $("#buildEnvelope").addEventListener("click",()=>{
+    currentEnvelope={
+      schema:"ear-cha-envelope.v1",
+      feature_id:$("#featureId").value.trim(),
+      operator_intent:$("#intent").value,
+      source:{
+        name:$("#sourceName").value.trim(),
+        version_or_ref:$("#sourceVersion").value.trim(),
+        license_or_constraints:$("#license").value.trim()
+      },
+      chosen_strategy:strategy,
+      test_plan:$("#testPlan").value,
+      state:"QUEUED_NOT_EXECUTED",
+      evidence_required:true,
+      operator_approval_for_risky_actions:true,
+      created_at:now()
+    };
+    $("#envelopePreview").textContent=JSON.stringify(currentEnvelope,null,2);
+    toast("Cha envelope built");
+  });
+
+  $("#copyEnvelope").addEventListener("click",()=>{
+    if(!currentEnvelope) return toast("Build an envelope first");
+    copyText(JSON.stringify(currentEnvelope,null,2));
+  });
+
+  $("#downloadEnvelope").addEventListener("click",()=>{
+    if(!currentEnvelope) return toast("Build an envelope first");
+    download(`${currentEnvelope.feature_id || "EAR-CHA"}-envelope.json`,JSON.stringify(currentEnvelope,null,2));
+  });
+
+  $("#clearMission").addEventListener("click",()=>{
+    ["sourceName","intent","sourceVersion","license","testPlan"].forEach(id=>$("#"+id).value="");
+    currentEnvelope=null;
+    $("#envelopePreview").textContent="No envelope built yet.";
+  });
+
+  $("#exportRegister").addEventListener("click",()=>{
+    download("EAR-REA-ChaChaCha-feature-register-snapshot.json",JSON.stringify({
+      schema:"ear-feature-register-snapshot.v1",
+      exported_at:now(),
+      certification:"SNAPSHOT_ONLY_NOT_RUNTIME_CERTIFICATION",
+      features
+    },null,2));
+  });
+
+  $("#importRegister").addEventListener("change", async e=>{
+    const file=e.target.files[0]; if(!file) return;
+    try{
+      const parsed=JSON.parse(await file.text());
+      const incoming=Array.isArray(parsed)?parsed:parsed.features;
+      if(!Array.isArray(incoming)) throw new Error("No features array");
+      features=incoming;
+      localStorage.setItem("ear.features",JSON.stringify(features));
+      renderFeatures();toast("Register imported locally");
+    }catch(err){toast("Import failed: "+err.message)}
+    e.target.value="";
+  });
+
+  $("#copyReaCommand").addEventListener("click",()=>copyText($("#reaCommand").textContent));
+
+  $("#checkReceipt").addEventListener("click",()=>{
+    const raw=$("#runtimeReceipt").value.trim();
+    if(!raw){$("#receiptValidation").textContent="No runtime receipt loaded.";return}
+    try{
+      const r=JSON.parse(raw);
+      const validCapability=r.capability==="reverse-engineering.rea";
+      const pass=r.status==="PASS";
+      const hasNode=typeof r.node==="string" && r.node.length>0;
+      const out={
+        parsed:true,
+        capability_match:validCapability,
+        node_present:hasNode,
+        reported_status:r.status || null,
+        gui_interpretation:(validCapability && hasNode && pass) ? "RUNTIME GUARD RECEIPT REPORTS PASS" : "NOT VERIFIED",
+        warning:"This validates receipt shape only. It does not independently execute REA."
+      };
+      $("#receiptValidation").textContent=JSON.stringify(out,null,2);
+    }catch(err){
+      $("#receiptValidation").textContent="Invalid JSON: "+err.message;
+    }
+  });
+
+  $("#newLocalReceipt").addEventListener("click",()=>{
+    const cap=prompt("Capability / test name:");
+    if(!cap) return;
+    const status=(prompt("Status: PASS / PARTIAL / NOT RUN / ENVIRONMENT BLOCKED","NOT RUN")||"NOT RUN").toUpperCase();
+    const detail=prompt("Evidence / note:","")||"";
+    receipts.push({time:now(),capability:cap,status,detail});
+    localStorage.setItem("ear.receipts",JSON.stringify(receipts));
+    renderReceipts();
+  });
+
+  $("#exportReceipts").addEventListener("click",()=>{
+    download("EAR-REA-ChaChaCha-local-receipts.json",JSON.stringify({
+      schema:"ear-local-receipts.v1",
+      exported_at:now(),
+      warning:"Local browser receipts are not repository or runtime certification unless independently verified.",
+      receipts
+    },null,2));
+  });
+
+  $("#clearReceipts").addEventListener("click",()=>{
+    if(!confirm("Clear only locally added receipts from this browser?")) return;
+    receipts=[];localStorage.removeItem("ear.receipts");renderReceipts();
+  });
+
+  const prefs=JSON.parse(localStorage.getItem("ear.ui") || "{}");
+  const applyPrefs=()=>{
+    const scale=Number(prefs.scale || 1);
+    document.documentElement.style.setProperty("--font-scale",scale);
+    $("#fontScale").value=scale;
+    $("#fontScaleValue").textContent=Math.round(scale*100)+"%";
+    document.body.classList.toggle("high-contrast",!!prefs.contrast);
+    document.body.classList.toggle("reduce-motion",!!prefs.motion);
+    $("#contrastToggle").textContent="HIGH CONTRAST: "+(prefs.contrast?"ON":"OFF");
+    $("#motionToggle").textContent="REDUCED MOTION: "+(prefs.motion?"ON":"OFF");
+  };
+  $("#fontScale").addEventListener("input",e=>{
+    prefs.scale=Number(e.target.value);localStorage.setItem("ear.ui",JSON.stringify(prefs));applyPrefs();
+  });
+  $("#contrastToggle").addEventListener("click",()=>{
+    prefs.contrast=!prefs.contrast;localStorage.setItem("ear.ui",JSON.stringify(prefs));applyPrefs();
+  });
+  $("#motionToggle").addEventListener("click",()=>{
+    prefs.motion=!prefs.motion;localStorage.setItem("ear.ui",JSON.stringify(prefs));applyPrefs();
+  });
+  $("#resetPrefs").addEventListener("click",()=>{
+    prefs.scale=1;prefs.contrast=false;prefs.motion=false;localStorage.setItem("ear.ui",JSON.stringify(prefs));applyPrefs();
+  });
+
+  $$("#loopSteps .step").forEach(step=>step.addEventListener("click",()=>{
+    $$("#loopSteps .step").forEach(s=>s.classList.remove("active"));
+    step.classList.add("active");
+  }));
+
+  renderFeatures();
+  renderReceipts();
+  applyPrefs();
+})();
+</script>
+</body>
+</html>
