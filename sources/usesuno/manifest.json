@@ -9,7 +9,7 @@
     "rea": "CONNECT_MCP"
   },
   "public_surface": {
-    "mapped_urls": 168,
+    "mapped_urls": 169,
     "tools_crawl": {
       "status": "completed",
       "pages_completed": 18,
@@ -35,7 +35,15 @@
         "https://usesuno.com/tools/lyrics-timestamp/",
         "https://usesuno.com/tools/album/"
       ]
-    }
+    },
+    "successful_unique_resources": 167,
+    "blocked_resources": 2,
+    "receipts": "evidence/usesuno/2026-11-08-crawl-receipts.json",
+    "latest_map": "evidence/usesuno/2026-11-08-url-map-r2.json",
+    "failures": [
+      "research/suno-audio-download-report/data/usesuno-suno-audio-study-stats.csv — document_antibot",
+      "research/suno-audio-download-report/data/usesuno-suno-audio-study-conditions.csv — document_antibot"
+    ]
   },
   "observed_capability_families": [
     "prompt builder",
