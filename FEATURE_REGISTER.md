@@ -206,3 +206,21 @@ Other changes: CI saves a build log to a `ci-log/run-N` branch if a build fails.
 - Cha 1 (2026-11-08): Public URL map captured (168); bounded tools crawl completed 18/18; capability families classified.
 - Cha 2 (2026-11-08): REA 6.8.0 MCP adapter and runtime guard added; clean-room browser-local implementation prepared for the existing Lokivelli music lane.
 - Cha 3: NOT RUN — execute REA in the target runtime, run the browser tools on-device, and record receipts before LIVE/PASS certification.
+
+
+### 2026-11-08 — EAR-0007 crawl expansion receipt
+
+A later same-day map pass returned **169 public URLs**. The map count changed across discovery passes (163 → 168 → 169), so the count is treated as a captured observation, not an immutable site total.
+
+Unique mapped-resource coverage after bounded crawls and direct scrapes:
+
+- **167/169 successfully scraped**
+- **2/169 ENVIRONMENT BLOCKED**
+- Blocked: `usesuno-suno-audio-study-stats.csv` and `usesuno-suno-audio-study-conditions.csv`
+- Both failures reported `document_antibot` after retry exhaustion.
+- Crawl receipts: `evidence/usesuno/2026-11-08-crawl-receipts.json`
+- Latest URL map snapshot: `evidence/usesuno/2026-11-08-url-map-r2.json`
+
+Additional category receipts: tools 18/18; reference library 34/34; learning course 41/41; articles 17/17; guide/genre 29/29; labs 3/3; research 4/4; extensions 3/3; remaining ordinary pages and translated downloader pages 18/18.
+
+This expands Cha 1 evidence acquisition. It does **not** change the existing runtime status: REA execution on the target device and interactive on-device testing of the Lokivelli Hub implementation remain NOT RUN until mechanically reproduced there.
