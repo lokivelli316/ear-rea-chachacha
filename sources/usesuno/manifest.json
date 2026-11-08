@@ -71,5 +71,21 @@
     "no_secret_collection": true,
     "no_wholesale_source_copy": true,
     "respect_component_licenses": true
+  },
+  "stack_integration": {
+    "repository": "lokivelli316/lokivelli-hub",
+    "paths": [
+      "music/index.html",
+      "music/suno-lab.html",
+      "music/suno-lab.css",
+      "music/suno-lab.js"
+    ],
+    "implementation": "original browser-local utilities",
+    "verification": {
+      "javascript_syntax": "PASS",
+      "html_reference_check": "PASS",
+      "interactive_phone_test": "NOT RUN"
+    },
+    "note": "Repository is private and GitHub Pages is not enabled; repository wiring is not equivalent to a live hosted deployment."
   }
 }
