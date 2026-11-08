@@ -178,3 +178,31 @@ Other changes: CI saves a build log to a `ci-log/run-N` branch if a build fails.
 **Iteration history**
 
 - Cha 1 (2026-10-15): Built and compiled. On-device tests NOT RUN.
+
+
+---
+
+## EAR-0007 — UseSuno public capability crawl + stack assembly
+
+| Field | Record |
+| --- | --- |
+| Feature ID | EAR-0007 |
+| Logged | 2026-11-08 |
+| Operator intent | "Usesuno.Com I want to scrape and crawl the fuck out of it and rea ear rea cha  cha  cha into my stack" |
+| Sources | Public `usesuno.com`; `morluto/rea` / `rea-agents@6.8.0`; open-source UseSuno MV Studio |
+| License / source constraints | REA 6.8.0 is MIT. The discovered UseSuno MV Studio is AGPL-3.0-only and therefore stays a separately licensed reused component unless its AGPL obligations are deliberately carried into a deployment. The broader public UseSuno site is treated as observed behavior, not a source-code donor. |
+| Evidence | Public URL map captured 2026-11-08: 168 URLs. Bounded `/tools/**` crawl completed 18/18 pages, crawl receipt `01a1bb7a-19d1-7703-afa3-9a3f63cd7bc0`. Evidence snapshot: `evidence/usesuno/2026-11-08-url-map.json`. Recon manifest: `sources/usesuno/manifest.json`. |
+| Observed mechanism | UseSuno exposes a large browser-tool and guide surface. The simplest utilities are browser-local transformations. Other lanes inspect or retrieve public Suno resources. The MV lane is explicitly local-first in its open-source project. |
+| Chosen strategy | **Three-way EAR split.** (1) REBUILD original versions of browser-local utilities inside the existing Lokivelli music stack. (2) REUSE the MV Studio only as a separate licensed component, preserving AGPL boundaries. (3) CONNECT REA through a pinned MCP adapter; do not fuse REA identity into EAR. |
+| Adapter / implementation | `adapters/rea/adapter.json`; `scripts/check-rea-runtime.mjs`; Lokivelli Hub implementation is `music/suno-lab.html` plus its supporting files. |
+| Permissions / boundaries | Public pages only. No login bypass, CAPTCHA bypass, secret collection, or access-control circumvention. No wholesale copying of protected site source. Rate limits and component licenses remain binding. |
+| Verification | URL mapping = PASS (168 URLs mechanically returned). `/tools/**` bounded crawl = PASS (18/18). REA adapter file = configured, runtime NOT RUN on the operator device. Browser implementation static syntax/HTML checks = PASS before repository write; interactive phone/browser test = NOT RUN. |
+| Known limitations | A public crawl does not prove hidden/internal functionality. Network-backed UseSuno behaviors are not cloned here. REA 6.8.0 requires Node `^22.23.4 || ^24.22.1 || >=26.12.1`; the target runtime must pass `scripts/check-rea-runtime.mjs` before REA is called LIVE. |
+| Operator approval | Operator directly requested crawl + EAR/REA stack integration on 2026-11-08. |
+| Status | PARTIAL — evidence acquisition and repository wiring performed; REA target-runtime execution and on-device browser interaction remain unverified. |
+
+**Iteration history**
+
+- Cha 1 (2026-11-08): Public URL map captured (168); bounded tools crawl completed 18/18; capability families classified.
+- Cha 2 (2026-11-08): REA 6.8.0 MCP adapter and runtime guard added; clean-room browser-local implementation prepared for the existing Lokivelli music lane.
+- Cha 3: NOT RUN — execute REA in the target runtime, run the browser tools on-device, and record receipts before LIVE/PASS certification.
