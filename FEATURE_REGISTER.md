@@ -224,3 +224,21 @@ Unique mapped-resource coverage after bounded crawls and direct scrapes:
 Additional category receipts: tools 18/18; reference library 34/34; learning course 41/41; articles 17/17; guide/genre 29/29; labs 3/3; research 4/4; extensions 3/3; remaining ordinary pages and translated downloader pages 18/18.
 
 This expands Cha 1 evidence acquisition. It does **not** change the existing runtime status: REA execution on the target device and interactive on-device testing of the Lokivelli Hub implementation remain NOT RUN until mechanically reproduced there.
+
+
+### 2026-11-08 — EAR-0007 repository-write verification correction
+
+The EAR-0007 table above says the browser implementation had static syntax/HTML checks before repository write. That local pre-write check did **not** prove the exact split files written to GitHub.
+
+A post-write verification of `lokivelli316/lokivelli-hub/music/suno-lab.js` found a JavaScript parse failure caused by over-escaped regular expressions. This was a real FAIL and was not counted as PASS. The file was repaired in commit `7ba825dd07f737be8572ae6563697e55fd5fd8cf`.
+
+After the repair, the exact GitHub file was fetched again and compiled with the V8 parser using `new Function(...)`: **PASS**. The exact GitHub HTML was also fetched and mechanically checked for its CSS reference, JavaScript reference, eight implemented tool controls, and Music Vault link: **PASS**.
+
+Current verification remains:
+- Repository JSON contracts / receipts parse: PASS
+- Exact repository JavaScript syntax: PASS
+- Exact repository HTML reference checks: PASS
+- Interactive browser / Samsung phone behavior: NOT RUN
+- REA execution in the operator's target runtime: NOT RUN
+
+No LIVE or COMPLETE certification is made from the static checks.
