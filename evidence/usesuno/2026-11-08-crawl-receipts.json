@@ -1,0 +1,145 @@
+{
+  "source": "https://usesuno.com/",
+  "captured_at": "2026-11-08",
+  "mapped_urls": 169,
+  "successful_unique_resources": 167,
+  "blocked_resources": 2,
+  "category_crawls": [
+    {
+      "lane": "tools",
+      "completed": 18,
+      "total": 18,
+      "id": "01a1bb7a-19d1-7703-afa3-9a3f63cd7bc0"
+    },
+    {
+      "lane": "guide-reference",
+      "completed": 34,
+      "total": 34,
+      "id": "01a1bb83-c5fd-714e-93c4-e7a2a0b603ac"
+    },
+    {
+      "lane": "guide-learn",
+      "completed": 41,
+      "total": 41,
+      "id": "01a1bb85-6032-72fa-9968-87b0bf82b316"
+    },
+    {
+      "lane": "articles",
+      "completed": 17,
+      "total": 17,
+      "id": "01a1bb86-fd66-7499-86fb-e59855250345"
+    },
+    {
+      "lane": "guide-and-genres",
+      "completed": 29,
+      "total": 29,
+      "id": "01a1bb87-a587-75b9-89ab-946b601a8d0a"
+    },
+    {
+      "lane": "labs",
+      "completed": 3,
+      "total": 3,
+      "id": "01a1bb89-05f7-7096-a21e-6e20c4ff9aca"
+    },
+    {
+      "lane": "research",
+      "completed": 4,
+      "total": 4,
+      "id": "01a1bb89-92e5-7088-a056-9ccd826bdce5"
+    },
+    {
+      "lane": "extensions",
+      "completed": 3,
+      "total": 3,
+      "id": "01a1bb8a-199f-7405-a738-dd75c7b115d4"
+    }
+  ],
+  "individual_scrapes": [
+    [
+      "https://usesuno.com/pt-br/tools/downloader",
+      "01a1bb8a-a867-708a-977e-4ab2b44a1ddd"
+    ],
+    [
+      "https://usesuno.com/vi/tools/downloader",
+      "01a1bb8a-ad35-702b-b129-dc8f8c724c44"
+    ],
+    [
+      "https://usesuno.com/about",
+      "01a1bb8a-b617-74cb-907d-3792d6637c8c"
+    ],
+    [
+      "https://usesuno.com/contact",
+      "01a1bb8a-bb5a-74ee-b867-de0c85323fb9"
+    ],
+    [
+      "https://usesuno.com/tr/tools/downloader",
+      "01a1bb8a-c06e-72a6-b89d-54fba65af3ba"
+    ],
+    [
+      "https://usesuno.com/de/tools/downloader",
+      "01a1bb8a-c70c-751f-93eb-380c043a9e09"
+    ],
+    [
+      "https://usesuno.com/sitemap.xml",
+      "01a1bb8a-ceef-70f0-9829-6aaa8f6c74d2"
+    ],
+    [
+      "https://usesuno.com",
+      "01a1bb8a-d1a1-76ae-b01a-e0dc79c279f0"
+    ],
+    [
+      "https://usesuno.com/privacy",
+      "01a1bb8a-d5da-75a9-ad97-79382d7df2fc"
+    ],
+    [
+      "https://usesuno.com/ru/tools/downloader",
+      "01a1bb8a-da41-76af-814f-d79ab520ce23"
+    ],
+    [
+      "https://usesuno.com/features",
+      "01a1bb8a-ef29-7553-abec-82bd96ece773"
+    ],
+    [
+      "https://usesuno.com/guide",
+      "01a1bb8a-f5ff-70b5-8c9b-420ad6425e5e"
+    ],
+    [
+      "https://usesuno.com/terms",
+      "01a1bb8a-fc9d-76c8-a276-0f194f06bbad"
+    ],
+    [
+      "https://usesuno.com/id/tools/downloader",
+      "01a1bb8b-00b7-759c-81d6-6f551fba490d"
+    ],
+    [
+      "https://usesuno.com/it/tools/downloader",
+      "01a1bb8b-06c7-7464-8a32-ead85e6bfffc"
+    ],
+    [
+      "https://usesuno.com/es/tools/downloader",
+      "01a1bb8b-0bf4-7549-a88b-e63bca85ee11"
+    ],
+    [
+      "https://usesuno.com/fr/tools/downloader",
+      "01a1bb8b-12fe-769c-ae70-386657436cea"
+    ],
+    [
+      "https://usesuno.com/styles",
+      "01a1bb8b-17ef-751d-870d-cb622b4f0e5d"
+    ]
+  ],
+  "failures": [
+    {
+      "url": "https://usesuno.com/research/suno-audio-download-report/data/usesuno-suno-audio-study-stats.csv",
+      "status": "ENVIRONMENT BLOCKED",
+      "error_class": "document_antibot",
+      "detail": "Scrape aborted after exceeding retry limit."
+    },
+    {
+      "url": "https://usesuno.com/research/suno-audio-download-report/data/usesuno-suno-audio-study-conditions.csv",
+      "status": "ENVIRONMENT BLOCKED",
+      "error_class": "document_antibot",
+      "detail": "Scrape aborted after exceeding retry limit."
+    }
+  ]
+}
