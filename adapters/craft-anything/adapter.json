@@ -1,0 +1,27 @@
+{
+  "capability_id": "reverse-engineering.craft-anything",
+  "name": "Craft Anything — independent Rust inspection/build/check provider",
+  "provider": "storytold/craft-anything",
+  "upstream_commit": "83684828c0d33f5e7491e80f17863f70129c10db",
+  "code_license": "MIT OR Apache-2.0",
+  "asset_and_brand_notice": "The ArtCraft name, wordmark, logo and raven app icon are not open-source assets; do not rebrand or redistribute them as EAR assets.",
+  "transport": "mcp-stdio",
+  "command": "craft-anything-cli",
+  "args": [
+    "mcp",
+    "--all-tools"
+  ],
+  "build_prerequisite": "Rust 1.97 or later for a source build; installed CLI runtime must be verified separately",
+  "boundaries": {
+    "independent_process": true,
+    "clean_room_default": true,
+    "deep_mode_requires_explicit_operator_authority": true,
+    "feature_not_identity": true,
+    "evidence_required": true,
+    "no_auto_install": true,
+    "no_silent_crossfeed": true,
+    "risky_actions_require_approval": true
+  },
+  "status": "CONFIGURED_NOT_RUNTIME_VERIFIED",
+  "integration_hub": "https://github.com/lokivelli316/crafterea-cha-cha/pull/1"
+}

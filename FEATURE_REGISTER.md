@@ -242,3 +242,30 @@ Current verification remains:
 - REA execution in the operator's target runtime: NOT RUN
 
 No LIVE or COMPLETE certification is made from the static checks.
+
+---
+
+## EAR-0008 — Three-engine federation: EAR × REA × Craft Anything
+
+| Field | Record |
+| --- | --- |
+| Feature ID | EAR-0008 |
+| Logged | 2026-11-10 |
+| Operator intent | "Make sure to adopt all three rea, ear rea cha cha cha and craft anything" |
+| Sources | **EAR** operator-owned `lokivelli316/ear-rea-chachacha` commit `cfe1ba3d730c3ba93b0558544eac3ba3d789741c`; **REA** original `morluto/rea` commit `b2f3dc81fa503c2b9ff0d8625336ed2e74d1e829`; **Craft Anything** original `storytold/craft-anything` commit `83684828c0d33f5e7491e80f17863f70129c10db` |
+| Source constraints | Preserve all three identities and upstream histories. REA code is MIT-licensed; Craft Anything code is MIT OR Apache-2.0, but ArtCraft trademarks, logos and raven icon are restricted. Do not conflate REA with the private parallel candidate. |
+| Chosen strategy | **CONNECT** all three through an independent `crafterea-cha-cha` integration repository; no upstream substitution or source flattening. |
+| Adapter / implementation | Existing `adapters/rea/adapter.json` (unchanged); new `adapters/craft-anything/adapter.json`; integration hub PR https://github.com/lokivelli316/crafterea-cha-cha/pull/1 with Git submodules, source lock, distinct MCP servers and a consent-based two-provider analysis bridge. EAR retains control of the iterative operator workflow and feature register. |
+| Permissions / boundaries | Explicit operator approval before external execution or privileged mode; no automatic code changes, installation, binary target inspection without consent, crossfeed, or promotion of private experiments. Existing EAR console remains unchanged. |
+| Test plan | Validate source Gitlinks against source lock; Python unit tests for explicit consent, CLI dispatch and isolated receipts; deploy REA and Craft CLI on permitted test host; real fixture analyses; verify lack-of-provider degradation; wire EAR GUI to the orchestrator; check on Samsung/Termux. |
+| Test results | Adapter and hub source written as integration candidates. GitHub Actions and runtime qualification not yet independently observed at this entry. **No LIVE or full three-engine verification claimed.** |
+| Known limitations | Craft Anything currently early alpha; its own clean-room mode is not an OS sandbox. REA and Craft independent CLI execution is a preliminary bridge, not actual verified bidirectional crossfeed, GUI integration, or completed production deployment. The private REA parallel repo retains its documented HOLDS. |
+| Operator approval | Operator explicitly requested adopting all three on 2026-11-10; this does not authorize unrelated destructive code execution or private experiment runs. |
+| Status | **PARTIAL — integration branch and adapters staged; live three-engine end-to-end remains HOLD.** |
+
+**Iteration history**
+
+- Cha 1 (2026-11-10): Inspected three original repos and parallel experiment; pinned original source commits with independent submodules; added REA/Craft MCP configuration and explicit-consent CLI evidence bridge in draft hub PR #1. EAR register entry and Craft adapter added in separate EAR PR; existing entries preserved byte-for-byte.
+- Cha 2: NOT RUN — verify CI/unit tests and source pin checkout; run both independent tools on the same permitted fixture, reconcile evidence without conflating it.
+- Cha 3: NOT RUN — wire actual EAR operator-console control, approval and receipts across tools, then verify on target phone and host. Do not claim LIVE until measured and recorded.
+
