@@ -1,0 +1,23 @@
+test_adapter_timeout_is_failure_receipt (test_boundaries.BoundaryTests.test_adapter_timeout_is_failure_receipt) ... ok
+test_cancellation_between_iterations_keeps_prior_receipt (test_boundaries.BoundaryTests.test_cancellation_between_iterations_keeps_prior_receipt) ... ok
+test_concurrent_process_appends_preserve_chain (test_boundaries.BoundaryTests.test_concurrent_process_appends_preserve_chain) ... ok
+test_demo_cancellation_does_not_grant_consent (test_boundaries.BoundaryTests.test_demo_cancellation_does_not_grant_consent) ... ok
+test_json_nonfinite_input_rejected_before_process (test_boundaries.BoundaryTests.test_json_nonfinite_input_rejected_before_process) ... ok
+test_provider_exception_becomes_recorded_failure (test_boundaries.BoundaryTests.test_provider_exception_becomes_recorded_failure) ... ok
+test_reorder_and_duplicate_lines_detected (test_boundaries.BoundaryTests.test_reorder_and_duplicate_lines_detected) ... ok
+test_unknown_adapter_and_empty_queue (test_boundaries.BoundaryTests.test_unknown_adapter_and_empty_queue) ... ok
+test_wordlens_is_independently_runnable (test_boundaries.BoundaryTests.test_wordlens_is_independently_runnable) ... ok
+test_acceptance_cancellation_and_revocation (test_slice.SliceTests.test_acceptance_cancellation_and_revocation) ... ok
+test_adapters_alone_schema_permissions_disconnect (test_slice.SliceTests.test_adapters_alone_schema_permissions_disconnect) ... ok
+test_cli_dry_run_execute_and_corruption_exit (test_slice.SliceTests.test_cli_dry_run_execute_and_corruption_exit) ... ok
+test_consent_refusal_and_bounded_failure (test_slice.SliceTests.test_consent_refusal_and_bounded_failure) ... ok
+test_corrupted_register_blocks_read_and_append (test_slice.SliceTests.test_corrupted_register_blocks_read_and_append) ... ok
+test_demo_two_providers_degrades_and_replay_is_safe (test_slice.SliceTests.test_demo_two_providers_degrades_and_replay_is_safe) ... ok
+test_dry_run_needs_no_consent_and_never_invokes (test_slice.SliceTests.test_dry_run_needs_no_consent_and_never_invokes) ... ok
+test_register_append_replay_duplicate_and_hash (test_slice.SliceTests.test_register_append_replay_duplicate_and_hash) ... ok
+test_truncated_register_and_invalid_event_rejected (test_slice.SliceTests.test_truncated_register_and_invalid_event_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.520s
+
+OK
